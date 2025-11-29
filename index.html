@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vinkal Prajapati | Developer, Educator, Founder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Official portfolio of Vinkal Prajapati – Developer, Educator & Founder of Quantum Institute."
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-soft: #090d23;
+      --bg-glass: rgba(15, 23, 42, 0.85);
+      --accent: #7c3aed;
+      --accent-soft: rgba(124, 58, 237, 0.2);
+      --accent-2: #22c55e;
+      --accent-3: #f97316;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border-soft: rgba(148, 163, 184, 0.35);
+      --radius-xl: 24px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.85);
+      --nav-height: 70px;
+    }
+
+    [data-theme="light"] {
+      --bg: #f3f4f6;
+      --bg-soft: #ffffff;
+      --bg-glass: rgba(255, 255, 255, 0.9);
+      --text: #0f172a;
+      --muted: #6b7280;
+      --border-soft: rgba(148, 163, 184, 0.5);
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1d2337 0, #050816 36%, #020617 70%);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ==== UTILITIES ==== */
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: linear-gradient(
+        120deg,
+        rgba(124, 58, 237, 0.2),
+        rgba(34, 197, 94, 0.18),
+        rgba(15, 23, 42, 0.9)
+      );
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .tag-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #fff, #22c55e);
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.9);
+    }
+
+    .section {
+      padding: 5rem 0;
+      position: relative;
+    }
+
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+
+    .section-title {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem);
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      max-width: 520px;
+      color: var(--muted);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.28rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.8rem;
+      gap: 0.35rem;
+      color: var(--muted);
+      background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.15), transparent);
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.8rem;
+    }
+
+    .btn {
+      position: relative;
+      border-radius: 999px;
+      padding: 0.8rem 1.4rem;
+      font-size: 0.9rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 500;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #7c3aed, #22c55e);
+      color: #f9fafb;
+      box-shadow: 0 10px 30px rgba(124, 58, 237, 0.55);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 48px rgba(124, 58, 237, 0.75);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--border-soft);
+      color: var(--muted);
+      backdrop-filter: blur(16px);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.7);
+      transform: translateY(-1px);
+    }
+
+    .btn-icon {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    /* ==== NAVBAR ==== */
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.95),
+        rgba(15, 23, 42, 0.75),
+        transparent
+      );
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    .nav-inner {
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .nav-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: conic-gradient(
+        from 220deg,
+        #22c55e,
+        #7c3aed,
+        #f97316,
+        #22c55e
+      );
+      padding: 2px;
+      position: relative;
+    }
+
+    .nav-logo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e5e7eb;
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .nav-brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .nav-brand-main {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-brand-sub {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      font-size: 0.85rem;
+    }
+
+    .nav-link {
+      position: relative;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.35rem;
+      width: 0%;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #22c55e, #7c3aed);
+      transition: width 0.2s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link--active::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .theme-toggle {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      cursor: pointer;
+      background: rgba(15, 23, 42, 0.4);
+      backdrop-filter: blur(18px);
+      transition: transform 0.16s ease, background 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.85);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .nav-menu-toggle {
+      display: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      background: rgba(15, 23, 42, 0.6);
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-menu-toggle {
+        display: inline-flex;
+      }
+    }
+
+    /* ==== HERO ==== */
+
+    .hero {
+      padding-top: 3rem;
+      padding-bottom: 5rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-title {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-size: clamp(2.4rem, 3.4vw + 1.4rem, 3.7rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span.gradient {
+      background: linear-gradient(120deg, #a855f7, #22c55e, #f97316);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 540px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .hero-meta-item {
+      padding: 0.6rem 0.8rem;
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      backdrop-filter: blur(20px);
+      background: radial-gradient(
+        circle at top left,
+        rgba(148, 163, 184, 0.25),
+        rgba(15, 23, 42, 0.9)
+      );
+      font-size: 0.78rem;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      min-width: 140px;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+    }
+
+    .hero-meta-label {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.65rem;
+      color: var(--muted);
+    }
+
+    .hero-meta-value {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .hero-right {
+      position: relative;
+      min-height: 260px;
+    }
+
+    .hero-orbit {
+      position: absolute;
+      inset: -20px;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.2), transparent 60%),
+        radial-gradient(circle at bottom, rgba(124, 58, 237, 0.4), transparent 70%);
+      filter: blur(18px);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .hero-card {
+      position: relative;
+      height: 100%;
+      border-radius: 32px;
+      padding: 1.8rem 1.6rem;
+      background: radial-gradient(circle at top left, #111827, #020617 58%, #020617);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(28px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-card-profile-row {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .hero-profile-img-wrap {
+      width: 82px;
+      height: 82px;
+      border-radius: 999px;
+      padding: 3px;
+      background: conic-gradient(from 210deg, #22c55e, #7c3aed, #f97316, #22c55e);
+      position: relative;
+    }
+
+    .hero-profile-img-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 14%;
+      border-radius: inherit;
+      background: radial-gradient(circle at 30% 20%, rgba(248, 250, 252, 0.08), transparent);
+      pointer-events: none;
+    }
+
+    .hero-profile-img {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      overflow: hidden;
+    }
+
+    .hero-profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: translateY(0);
+    }
+
+    .hero-profile-text-main {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .hero-profile-text-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-card-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.7rem;
+    }
+
+    .hero-chip {
+      border-radius: 999px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.72rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .hero-card-footer {
+      margin-top: 1.6rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+      font-size: 0.75rem;
+    }
+
+    .hero-card-footer-item {
+      border-radius: 16px;
+      border: 1px dashed rgba(148, 163, 184, 0.65);
+      padding: 0.6rem 0.7rem;
+      background: rgba(15, 23, 42, 0.8);
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .hero-card-footer-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    .hero-card-footer-value {
+      font-size: 0.82rem;
+    }
+
+    .hero-floating-tag {
+      position: absolute;
+      right: 10%;
+      top: -12px;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.68rem;
+      border-radius: 999px;
+      border: 1px solid rgba(59, 130, 246, 0.7);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.6), rgba(15, 23, 42, 0.95));
+      color: #e0f2fe;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .hero-floating-pill {
+      position: absolute;
+      left: -8px;
+      bottom: 16%;
+      padding: 0.25rem 0.65rem;
+      font-size: 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(52, 211, 153, 0.7);
+      background: radial-gradient(circle at top left, rgba(52, 211, 153, 0.4), rgba(15, 23, 42, 0.95));
+      color: #bbf7d0;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-right {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 2.2rem;
+      }
+      .hero-card-footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* ==== ABOUT & STATS ==== */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.2fr);
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .about-text {
+      font-size: 0.94rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .about-text p + p {
+      margin-top: 1rem;
+    }
+
+    .highlight {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .stat-card {
+      border-radius: 20px;
+      border: 1px solid var(--border-soft);
+      background: var(--bg-glass);
+      backdrop-filter: blur(22px);
+      box-shadow: var(--shadow-soft);
+      padding: 1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      min-height: 100px;
+    }
+
+    .stat-value {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .stat-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .stat-pill {
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 800px) {
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* ==== SKILLS ==== */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.3rem;
+    }
+
+    @media (max-width: 900px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .skills-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .skills-card {
+      border-radius: 18px;
+      padding: 1rem 1rem;
+      border: 1px solid var(--border-soft);
+      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 1));
+      backdrop-filter: blur(20px);
+    }
+
+    .skills-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+    }
+
+    .skills-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .skills-icon {
+      font-size: 1.1rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .skill-pill {
+      padding: 0.22rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: var(--muted);
+    }
+
+    /* ==== PROJECTS ==== */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    @media (max-width: 1000px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.96));
+      padding: 0.9rem 0.9rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.16s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top, rgba(124, 58, 237, 0.3), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px) translateZ(0);
+      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.95);
+      border-color: rgba(124, 58, 237, 0.7);
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    .project-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+    }
+
+    .project-name {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .project-tag {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+
+    .project-description {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .project-meta-row {
+      margin-top: 0.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .project-link-row {
+      margin-top: 0.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+    }
+
+    .project-link {
+      text-decoration: none;
+      color: #a855f7;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .project-link span {
+      font-size: 0.85rem;
+    }
+
+    /* ==== TIMELINE ==== */
+
+    .timeline {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      background: var(--bg-glass);
+      padding: 1.5rem 1.4rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .timeline-list {
+      position: relative;
+      padding-left: 1.2rem;
+      margin-top: 0.4rem;
+    }
+
+    .timeline-list::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      bottom: 4px;
+      width: 1px;
+      background: linear-gradient(to bottom, #22c55e, #7c3aed);
+      opacity: 0.65;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 0.8rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -3px;
+      top: 0.25rem;
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 40% 35%, #f9fafb, #22c55e);
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.9);
+    }
+
+    .timeline-date {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    .timeline-title {
+      font-size: 0.86rem;
+      font-weight: 500;
+      margin-top: 0.15rem;
+    }
+
+    .timeline-body {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+    }
+
+    /* ==== CONTENT & TEACHING ==== */
+
+    .dual-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1.6rem;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 800px) {
+      .dual-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .panel {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      background: var(--bg-glass);
+      padding: 1.4rem 1.4rem 1.2rem;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.87rem;
+      color: var(--muted);
+    }
+
+    .panel-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.7rem;
+    }
+
+    .panel-title {
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .panel-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin: 0.4rem 0 0.6rem;
+    }
+
+    .panel-tag {
+      font-size: 0.74rem;
+      border-radius: 999px;
+      padding: 0.18rem 0.65rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .panel-list {
+      list-style: none;
+      display: grid;
+      gap: 0.3rem;
+      margin-top: 0.4rem;
+    }
+
+    .panel-list li::before {
+      content: "•";
+      margin-right: 0.4rem;
+      color: #22c55e;
+    }
+
+    /* ==== CONTACT ==== */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .contact-footer {
+      margin-top: 1.8rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.4rem;
+    }
+
+    .contact-footer a {
+      color: #a855f7;
+      text-decoration: none;
+    }
+
+    .contact-form {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      background: var(--bg-glass);
+      padding: 1.3rem 1.3rem 1.4rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .form-row {
+      display: flex;
+      gap: 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .form-field {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.8rem;
+    }
+
+    .form-field label {
+      color: var(--muted);
+    }
+
+    .form-field input,
+    .form-field textarea {
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 0.6rem 0.8rem;
+      font-size: 0.85rem;
+      font-family: inherit;
+      outline: none;
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text);
+      resize: vertical;
+      min-height: 42px;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: #6b7280;
+    }
+
+    .form-field input:focus,
+    .form-field textarea:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.4);
+    }
+
+    @media (max-width: 640px) {
+      .form-row {
+        flex-direction: column;
+      }
+    }
+
+    /* ==== FOOTER ==== */
+
+    .footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.2);
+      padding: 1.6rem 0 1.8rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: #a855f7;
+    }
+
+    /* ==== SCROLL REVEAL ==== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==== MOBILE MENU ==== */
+
+    .nav-links-mobile {
+      display: none;
+    }
+
+    .nav-links-mobile.open {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      padding: 0.8rem 1.2rem 1.2rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.25);
+      background: rgba(15, 23, 42, 0.98);
+      backdrop-filter: blur(20px);
+    }
+
+    .nav-links-mobile a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.83rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    @media (min-width: 801px) {
+      .nav-links-mobile {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <div class="nav-left">
+          <div class="nav-logo">
+            <div class="nav-logo-inner">VP</div>
+          </div>
+          <div class="nav-brand-text">
+            <span class="nav-brand-main">Vinkal Prajapati</span>
+            <span class="nav-brand-sub">Developer • Educator • Founder</span>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#hero" class="nav-link nav-link--active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#teaching" class="nav-link">Teaching</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            🌙
+          </button>
+          <button class="nav-menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <nav class="nav-links-mobile" id="mobileNav">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero section" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-left reveal">
+          <div class="hero-eyebrow">
+            <span class="tag">
+              <span class="tag-dot"></span>
+              Quantum Institute • Founder & Educator
+            </span>
+            <span class="pill">
+              <span class="pill-dot"></span>
+              Web • Mobile • AI Experiences
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            Building <span class="gradient">modern products</span> &
+            empowering learners through tech.
+          </h1>
+
+          <p class="hero-subtitle">
+            I’m Vinkal Prajapati, a developer, educator, and founder obsessed with
+            crafting clean digital experiences and teaching the next generation of
+            creators. From utility apps and calculators to learning platforms and
+            AI-powered tools, I ship ideas that actually get used.
+          </p>
+
+          <div class="button-row">
+            <a href="#projects" class="btn btn-primary">
+              View selected work
+              <span class="btn-icon">↗</span>
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              Let’s build something
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">Focus</span>
+              <span class="hero-meta-value">Web & app development, UI/UX, AI-integrated tools</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">Roles</span>
+              <span class="hero-meta-value">Founder • Developer • Educator • Content Creator</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">Based in</span>
+              <span class="hero-meta-value">Uttar Pradesh, India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right reveal">
+          <div class="hero-orbit"></div>
+          <div class="hero-card">
+            <span class="hero-floating-tag">Available for collaborations</span>
+            <span class="hero-floating-pill">Design-driven engineering</span>
+
+            <div class="hero-card-profile-row">
+              <div class="hero-profile-img-wrap">
+                <div class="hero-profile-img">
+                  <!-- 👉 Apni image ka path yaha daalo -->
+                  <img src="assets/vinkal-profile.png" alt="Portrait of Vinkal Prajapati" />
+                </div>
+              </div>
+              <div>
+                <div class="hero-profile-text-main">Vinkal Prajapati</div>
+                <div class="hero-profile-text-sub">
+                  Founder & Educator @ Quantum Institute<br />
+                  Web & Mobile Developer • UI/UX • AI tools
+                </div>
+                <div class="hero-card-badges">
+                  <span class="hero-chip">Chrome Extension Creator</span>
+                  <span class="hero-chip">Dev.to Author</span>
+                  <span class="hero-chip">YouTube Educator</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-card-footer">
+              <div class="hero-card-footer-item">
+                <span class="hero-card-footer-label">Craft</span>
+                <span class="hero-card-footer-value">
+                  Product-minded developer focused on delightful interfaces and
+                  real-world impact.
+                </span>
+              </div>
+              <div class="hero-card-footer-item">
+                <span class="hero-card-footer-label">Teaching</span>
+                <span class="hero-card-footer-value">
+                  Quantum Institute – guiding students in Computer, CCC, and
+                  practical tech skills.
+                </span>
+              </div>
+              <div class="hero-card-footer-item">
+                <span class="hero-card-footer-label">Platforms</span>
+                <span class="hero-card-footer-value">
+                  GitHub • Dev.to • Hashnode • Blogger • YouTube
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Profile</span>
+          <div>
+            <h2 class="section-title">The educator-developer behind Quantum Institute.</h2>
+            <p class="section-subtitle">
+              I bridge three worlds: building products, teaching technology, and
+              creating content that makes complex concepts feel approachable.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I started as a self-driven web developer, experimenting with HTML, CSS,
+              JavaScript, and tools like Java, Python, and Swift. Over time, that
+              curiosity turned into a discipline for building <span class="highlight">
+              polished, production-ready experiences</span> – from calculators and
+              dashboards to full learning products and mobile-friendly tools.
+            </p>
+            <p>
+              As <span class="highlight">Founder & Educator at Quantum Institute</span>,
+              I help learners move beyond just “notes” and “theory”. I design
+              practical content, live sessions, and digital tools that train real
+              skills – especially for Computer, CCC, and competitive exam-focused
+              students.
+            </p>
+            <p>
+              Alongside that, I write and share projects on platforms like
+              <span class="highlight">Dev.to</span>, <span class="highlight">Hashnode</span>,
+              and <span class="highlight">Blogger</span>, plus utilities like
+              Chrome extensions and interactive tools. For me, shipping is non-negotiable:
+              an idea only counts once it’s live, usable, and improving someone’s day.
+            </p>
+          </div>
+
+          <div class="stats-grid reveal">
+            <div class="stat-card">
+              <div class="stat-value">Product-first dev</div>
+              <div class="stat-label">
+                Strong focus on UX, micro-interactions, and performance-minded front-end.
+              </div>
+              <div class="stat-pill-row">
+                <span class="stat-pill">Clean UI</span>
+                <span class="stat-pill">Responsive</span>
+                <span class="stat-pill">Mobile-ready</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">Educator & mentor</div>
+              <div class="stat-label">
+                Designing courses, explaining concepts simply, and building tools that help students practice.
+              </div>
+              <div class="stat-pill-row">
+                <span class="stat-pill">CCC</span>
+                <span class="stat-pill">Computer basics</span>
+                <span class="stat-pill">Exam prep</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">Tooling & utilities</div>
+              <div class="stat-label">
+                Apps, calculators, and utilities – from finance tools to typing tests and color pickers.
+              </div>
+              <div class="stat-pill-row">
+                <span class="stat-pill">Chrome extension</span>
+                <span class="stat-pill">Dev utilities</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">Always learning</div>
+              <div class="stat-label">
+                Exploring blockchain, AI integration, and modern web patterns to build future-ready products.
+              </div>
+              <div class="stat-pill-row">
+                <span class="stat-pill">AI + UI</span>
+                <span class="stat-pill">Blockchain basics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Skills & Stack</span>
+          <div>
+            <h2 class="section-title">Design-driven engineering with a strong front-end core.</h2>
+            <p class="section-subtitle">
+              I’m comfortable moving from Figma-level thinking to actual shipped code –
+              with a focus on readable structure, component-like thinking, and
+              performance.
+            </p>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skills-card reveal">
+            <div class="skills-title-row">
+              <div class="skills-title">Frontend</div>
+              <div class="skills-icon">🖥️</div>
+            </div>
+            <div class="skills-list">
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3</span>
+              <span class="skill-pill">JavaScript (ES6+)</span>
+              <span class="skill-pill">Responsive UI</span>
+              <span class="skill-pill">Animations</span>
+              <span class="skill-pill">Accessibility-minded</span>
+            </div>
+          </div>
+
+          <div class="skills-card reveal">
+            <div class="skills-title-row">
+              <div class="skills-title">Logic & Tools</div>
+              <div class="skills-icon">⚙️</div>
+            </div>
+            <div class="skills-list">
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Swift basics</span>
+              <span class="skill-pill">Chrome Extensions</span>
+              <span class="skill-pill">Web APIs</span>
+            </div>
+          </div>
+
+          <div class="skills-card reveal">
+            <div class="skills-title-row">
+              <div class="skills-title">Focus Areas</div>
+              <div class="skills-icon">🎯</div>
+            </div>
+            <div class="skills-list">
+              <span class="skill-pill">UI/UX thinking</span>
+              <span class="skill-pill">Micro-interactions</span>
+              <span class="skill-pill">Education products</span>
+              <span class="skill-pill">Financial tools</span>
+              <span class="skill-pill">AI-assisted flows</span>
+            </div>
+          </div>
+
+          <div class="skills-card reveal">
+            <div class="skills-title-row">
+              <div class="skills-title">Teaching</div>
+              <div class="skills-icon">📚</div>
+            </div>
+            <div class="skills-list">
+              <span class="skill-pill">Computer fundamentals</span>
+              <span class="skill-pill">CCC curriculum</span>
+              <span class="skill-pill">Exam-oriented practice</span>
+              <span class="skill-pill">Live doubt solving</span>
+            </div>
+          </div>
+
+          <div class="skills-card reveal">
+            <div class="skills-title-row">
+              <div class="skills-title">Content & Community</div>
+              <div class="skills-icon">✍️</div>
+            </div>
+            <div class="skills-list">
+              <span class="skill-pill">Dev.to articles</span>
+              <span class="skill-pill">Hashnode blogs</span>
+              <span class="skill-pill">Blogger posts</span>
+              <span class="skill-pill">YouTube tutorials</span>
+            </div>
+          </div>
+
+          <div class="skills-card reveal">
+            <div class="skills-title-row">
+              <div class="skills-title">Direction</div>
+              <div class="skills-icon">🚀</div>
+            </div>
+            <div class="skills-list">
+              <span class="skill-pill">AI + Education</span>
+              <span class="skill-pill">Gamified learning</span>
+              <span class="skill-pill">Interactive dashboards</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Selected Work</span>
+          <div>
+            <h2 class="section-title">A snapshot of tools, interfaces, and experiments.</h2>
+            <p class="section-subtitle">
+              I enjoy taking small ideas and turning them into polished utilities –
+              calculators, learning tools, UI components, and productivity helpers.
+            </p>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-top-row">
+              <h3 class="project-name">Vin Quiz: AI Learning & Exams</h3>
+              <span class="project-tag">Learning Product</span>
+            </div>
+            <p class="project-description">
+              A quiz-driven learning app focused on Computer, CCC, math and competitive exams,
+              blending traditional questions with AI-assisted explanations.
+            </p>
+            <div class="project-meta-row">
+              <span>Quizzes</span>
+              <span>AI helper</span>
+              <span>Exam-oriented</span>
+            </div>
+            <div class="project-link-row">
+              <a href="#" class="project-link">
+                <span>Case study (soon)</span> ↗
+              </a>
+              <span>Product + UX + Dev</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top-row">
+              <h3 class="project-name">Advanced Color Picker</h3>
+              <span class="project-tag">Chrome Extension</span>
+            </div>
+            <p class="project-description">
+              A browser extension for designers & developers with precise color picking,
+              multiple formats (HEX, RGB, HSL) and quick copy workflows.
+            </p>
+            <div class="project-meta-row">
+              <span>UX for devs</span>
+              <span>Eyedropper</span>
+              <span>Productivity</span>
+            </div>
+            <div class="project-link-row">
+              <a href="#" class="project-link">
+                <span>View extension</span> ↗
+              </a>
+              <span>Design • Build • Launch</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top-row">
+              <h3 class="project-name">Interactive Particles Hero</h3>
+              <span class="project-tag">UI Experiment</span>
+            </div>
+            <p class="project-description">
+              A landing hero with responsive layout and interactive particles, built to
+              explore motion, depth, and modern hero design patterns.
+            </p>
+            <div class="project-meta-row">
+              <span>JavaScript</span>
+              <span>Micro-interactions</span>
+              <span>Landing page</span>
+            </div>
+            <div class="project-link-row">
+              <a href="#" class="project-link">
+                <span>View on Dev.to</span> ↗
+              </a>
+              <span>UI/UX playground</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top-row">
+              <h3 class="project-name">Financial Calculators Suite</h3>
+              <span class="project-tag">Utility Tools</span>
+            </div>
+            <p class="project-description">
+              A collection of EMI, SIP, retirement and loan calculators designed with
+              neumorphism, clarity, and mobile-first layouts.
+            </p>
+            <div class="project-meta-row">
+              <span>HTML/CSS/JS</span>
+              <span>Neumorphism</span>
+              <span>Real-life use</span>
+            </div>
+            <div class="project-link-row">
+              <a href="#" class="project-link">
+                <span>View projects</span> ↗
+              </a>
+              <span>UI + Logic</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top-row">
+              <h3 class="project-name">Productivity & Dev Tools</h3>
+              <span class="project-tag">Mini Apps</span>
+            </div>
+            <p class="project-description">
+              From password generators and to-do lists to digital clocks and countdown
+              timers – small tools with professional polish.
+            </p>
+            <div class="project-meta-row">
+              <span>Component thinking</span>
+              <span>Codepen/Dev.to</span>
+            </div>
+            <div class="project-link-row">
+              <a href="#" class="project-link">
+                <span>Browse gallery</span> ↗
+              </a>
+              <span>Fast experiments</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top-row">
+              <h3 class="project-name">Team Showcase & 3D Carousels</h3>
+              <span class="project-tag">UI Patterns</span>
+            </div>
+            <p class="project-description">
+              Neumorphic team sections, 3D card carousels with swiper.js, and animated
+              navbars built as reusable patterns for future projects.
+            </p>
+            <div class="project-meta-row">
+              <span>Visual hierarchy</span>
+              <span>Motion</span>
+              <span>Reusable components</span>
+            </div>
+            <div class="project-link-row">
+              <a href="#" class="project-link">
+                <span>See UI library</span> ↗
+              </a>
+              <span>Design systems</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE + TEACHING -->
+    <section class="section" id="teaching">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Journey</span>
+          <div>
+            <h2 class="section-title">From self-taught experiments to running an institute.</h2>
+            <p class="section-subtitle">
+              I’ve kept one rule from the beginning: keep learning, keep shipping, and
+              keep helping others grow with you.
+            </p>
+          </div>
+        </div>
+
+        <div class="dual-grid">
+          <div class="timeline reveal">
+            <h3 style="font-size: 0.96rem; margin-bottom: 0.4rem;">
+              Milestones & themes
+            </h3>
+            <div class="timeline-list">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Early</div>
+                <div class="timeline-title">First experiments with the web</div>
+                <div class="timeline-body">
+                  Building basic layouts, landing pages, and experimenting with calculators,
+                  clocks, and mini apps using pure HTML, CSS, and JS.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Growth</div>
+                <div class="timeline-title">Publishing projects & articles online</div>
+                <div class="timeline-body">
+                  Sharing utilities, UI experiments, and tutorials on platforms like Dev.to,
+                  Hashnode, Blogger, and GitHub to document the journey and help beginners.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Quantum Institute</div>
+                <div class="timeline-title">Turning teaching into a mission</div>
+                <div class="timeline-body">
+                  Launching Quantum Institute to train students in Computer, CCC and
+                  practical technology with a focus on clarity, real-world examples, and
+                  confidence-building.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Now</div>
+                <div class="timeline-title">Building at the intersection of tech & education</div>
+                <div class="timeline-body">
+                  Creating AI-assisted learning tools, interactive dashboards, and apps like
+                  Vin Quiz to make learning more engaging and outcome-oriented.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel reveal">
+            <div class="panel-title-row">
+              <h3 class="panel-title">Teaching philosophy @ Quantum Institute</h3>
+              <span class="pill">
+                <span class="pill-dot"></span>
+                Learn by doing
+              </span>
+            </div>
+            <p>
+              My goal is simple: take students from “I’m scared of computers” to
+              “I can build and understand things on my own”.
+            </p>
+            <div class="panel-tags">
+              <span class="panel-tag">Structured foundations</span>
+              <span class="panel-tag">Clear Hindi + English explanations</span>
+              <span class="panel-tag">Practice-heavy</span>
+            </div>
+            <ul class="panel-list">
+              <li>Concepts are explained with real examples – not just theory or slides.</li>
+              <li>Students use digital tools, apps, and quizzes to reinforce learning.</li>
+              <li>Focus on Computer, CCC, and digital skills that actually help in jobs & exams.</li>
+              <li>Learning materials are updated as technology and exam patterns evolve.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Contact</span>
+          <div>
+            <h2 class="section-title">Let’s talk about your idea, product, or institute.</h2>
+            <p class="section-subtitle">
+              Whether you’re looking for a website, a learning product, a utility app, or
+              want to collaborate on tech-education, I’d love to hear from you.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="reveal">
+            <p style="font-size: 0.94rem; color: var(--muted); max-width: 540px;">
+              I’m open to collaborations, freelance projects, and partnerships around:
+            </p>
+            <ul class="panel-list" style="margin-top: 0.8rem;">
+              <li>Websites and web apps for businesses, institutes, or products.</li>
+              <li>Learning platforms, quiz tools, and exam-oriented digital products.</li>
+              <li>Chrome extensions or small utilities to streamline workflows.</li>
+              <li>Workshops or sessions for your students or team on digital skills.</li>
+            </ul>
+
+            <div class="contact-footer">
+              <span>
+                📧 Email:
+                <a href="mailto:hello@vinkal041.com">hello@vinkal041.com</a>
+                <!-- apna email daalna -->
+              </span>
+              <span>
+                🔗 GitHub:
+                <a href="https://github.com/Vinkal93" target="_blank" rel="noreferrer">
+                  @Vinkal93
+                </a>
+              </span>
+              <span>
+                📝 Dev.to:
+                <a href="https://dev.to/vinkalprajapati" target="_blank" rel="noreferrer">
+                  /vinkalprajapati
+                </a>
+              </span>
+              <span>
+                📰 Blog:
+                <a href="https://www.vinkal041.com" target="_blank" rel="noreferrer">
+                  vinkal041.com
+                </a>
+              </span>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="subject">Project / topic</label>
+                <input id="subject" type="text" placeholder="Website for institute, app idea, etc." />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="Tell me a bit about what you’re trying to build." required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 0.6rem;">
+              Send message
+              <span class="btn-icon">➤</span>
+            </button>
+            <p id="formStatus" style="margin-top: 0.6rem; font-size: 0.78rem; color: var(--muted);"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="yearSpan"></span> Vinkal Prajapati. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="#hero">Back to top</a>
+        <a href="https://github.com/Vinkal93" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://dev.to/vinkalprajapati" target="_blank" rel="noreferrer">Dev.to</a>
+        <a href="https://vinkal041.hashnode.dev" target="_blank" rel="noreferrer">Hashnode</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle with localStorage
+    const root = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+
+    function setTheme(mode) {
+      if (mode === "light") {
+        root.setAttribute("data-theme", "light");
+        themeToggle.textContent = "☀️";
+        localStorage.setItem("vp-theme", "light");
+      } else {
+        root.setAttribute("data-theme", "dark");
+        themeToggle.textContent = "🌙";
+        localStorage.setItem("vp-theme", "dark");
+      }
+    }
+
+    const savedTheme = localStorage.getItem("vp-theme");
+    if (savedTheme === "light" || savedTheme === "dark") {
+      setTheme(savedTheme);
+    } else {
+      setTheme("dark");
+    }
+
+    themeToggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme");
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+
+    // Mobile nav toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileNav = document.getElementById("mobileNav");
+
+    menuToggle.addEventListener("click", () => {
+      mobileNav.classList.toggle("open");
+    });
+
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => mobileNav.classList.remove("open"));
+    });
+
+    // Active nav links on scroll
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = document.querySelectorAll(".nav-links .nav-link");
+
+    function onScroll() {
+      const scrollPos = window.scrollY + 100;
+      sections.forEach((section) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute("id");
+        if (scrollPos >= top && scrollPos < top + height) {
+          navLinks.forEach((link) => {
+            link.classList.toggle(
+              "nav-link--active",
+              link.getAttribute("href") === "#" + id
+            );
+          });
+        }
+      });
+    }
+
+    window.addEventListener("scroll", onScroll);
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach((el) => observer.observe(el));
+
+    // Simple fake form handling (you can hook this to backend / Formspree)
+    function handleSubmit(e) {
+      e.preventDefault();
+      const statusEl = document.getElementById("formStatus");
+      statusEl.textContent =
+        "Thanks for reaching out. I’ll get back to you as soon as possible.";
+      e.target.reset();
+    }
+
+    // Footer year
+    document.getElementById("yearSpan").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
