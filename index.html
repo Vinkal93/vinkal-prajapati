@@ -1,2927 +1,1632 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Vinkal Prajapati | Developer, Educator & Founder</title>
-
-  <!-- Viewport -->
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-  />
-
-  <!-- Primary SEO -->
-  <meta
-    name="description"
-    content="Official portfolio of Vinkal Prajapati — Developer, Educator & Founder of Quantum Institute. Building modern web & mobile experiences, AI tools and practical learning products."
-  />
-  <meta
-    name="keywords"
-    content="Vinkal Prajapati, Quantum Institute, web developer, educator, Chrome extension developer, Vin Quiz, CCC, computer courses, AI learning tools"
-  />
-  <meta name="author" content="Vinkal Prajapati" />
-  <meta name="robots" content="index,follow" />
-
-  <!-- Canonical (apni live URL se replace karna) -->
-  <link rel="canonical" href="https://www.vinkal041.com/portfolio" />
-
-  <!-- Theme Colors -->
-  <meta name="theme-color" content="#050816" media="(prefers-color-scheme: dark)" />
-  <meta name="theme-color" content="#f3f4f6" media="(prefers-color-scheme: light)" />
-
-  <!-- Preconnect / Performance -->
-  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Vinkal Prajapati | Developer, Educator & Founder" />
-  <meta
-    property="og:description"
-    content="Developer, educator and founder of Quantum Institute — building modern web apps, Chrome extensions, and AI-powered learning tools."
-  />
-  <meta property="og:url" content="https://www.vinkal041.com/portfolio" />
-  <!-- Apni actual OG image ka path yaha de: -->
-  <meta property="og:image" content="https://www.vinkal041.com/assets/vinkal-og.jpg" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vinkal Prajapati | Developer, Educator & Founder" />
-  <meta
-    name="twitter:description"
-    content="Founder & Educator at Quantum Institute. Building modern digital products & empowering learners."
-  />
-  <meta
-    name="twitter:image"
-    content="https://www.vinkal041.com/assets/vinkal-og.jpg"
-  />
-
-  <!-- Favicon (replace with your assets) -->
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-
-  <!-- JSON-LD Person Schema (SEO) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Vinkal Prajapati",
-    "url": "https://www.vinkal041.com",
-    "image": "https://www.vinkal041.com/assets/vinkal-profile.png",
-    "jobTitle": "Founder & Educator",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Quantum Institute"
-    },
-    "sameAs": [
-      "https://in.linkedin.com/in/vinkal041",
-      "https://github.com/Vinkal93",
-      "https://dev.to/vinkalprajapati",
-      "https://vinkal041.hashnode.dev",
-      "https://quantuminstitute.framer.website"
-    ],
-    "knowsAbout": [
-      "Web development",
-      "UI/UX",
-      "Chrome extensions",
-      "Computer education",
-      "CCC",
-      "AI learning tools"
-    ]
-  }
-  </script>
-
-  <style>
-    :root {
-      /* Dark mode defaults */
-      --bg: #050816;
-      --bg-soft: #090d23;
-      --bg-glass: rgba(15, 23, 42, 0.85);
-      --accent: #7c3aed;
-      --accent-soft: rgba(124, 58, 237, 0.2);
-      --accent-2: #22c55e;
-      --accent-3: #f97316;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --border-soft: rgba(148, 163, 184, 0.35);
-      --radius-xl: 24px;
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.85);
-      --nav-height: 70px;
-    }
-
-    html[data-theme="light"] {
-      --bg: #f3f4f6;
-      --bg-soft: #ffffff;
-      --bg-glass: rgba(255, 255, 255, 0.9);
-      --text: #0f172a;
-      --muted: #6b7280;
-      --border-soft: rgba(148, 163, 184, 0.5);
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1d2337 0, #050816 36%, #020617 70%);
-      color: var(--text);
-      min-height: 100vh;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-      transition: overflow 0.3s ease;
-    }
-
-    body.sidebar-open {
-      overflow: hidden;
-    }
-
-    html[data-theme="light"] body {
-      background: radial-gradient(circle at top, #e5e7eb 0, #f3f4f6 45%, #e5e7eb 85%);
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* ==== UTILITIES ==== */
-
-    .container {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 1.25rem;
-    }
-
-    @media (min-width: 1280px) {
-      .container {
-        max-width: 1200px;
-      }
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.2rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      background: linear-gradient(
-        120deg,
-        rgba(124, 58, 237, 0.2),
-        rgba(34, 197, 94, 0.18),
-        rgba(15, 23, 42, 0.9)
-      );
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      white-space: nowrap;
-    }
-
-    html[data-theme="light"] .tag {
-      background: linear-gradient(
-        120deg,
-        rgba(124, 58, 237, 0.15),
-        rgba(34, 197, 94, 0.12),
-        rgba(249, 250, 251, 0.95)
-      );
-      border-color: rgba(148, 163, 184, 0.3);
-      color: #4b5563;
-    }
-
-    .tag-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 30%, #fff, #22c55e);
-      box-shadow: 0 0 12px rgba(34, 197, 94, 0.9);
-      flex-shrink: 0;
-    }
-
-    .section {
-      padding: 4.5rem 0;
-      position: relative;
-    }
-
-    .section-header {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-bottom: 2.6rem;
-    }
-
-    .section-kicker {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--muted);
-    }
-
-    .section-title {
-      font-family: "Space Grotesk", system-ui, sans-serif;
-      font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem);
-      font-weight: 700;
-    }
-
-    .section-subtitle {
-      font-size: 0.95rem;
-      max-width: 520px;
-      color: var(--muted);
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.28rem 0.8rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      font-size: 0.8rem;
-      gap: 0.35rem;
-      color: var(--muted);
-      background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.15), transparent);
-    }
-
-    html[data-theme="light"] .pill {
-      background: radial-gradient(circle at top left, rgba(209, 213, 219, 0.4), rgba(249, 250, 251, 0.8));
-      border-color: rgba(148, 163, 184, 0.3);
-      color: #6b7280;
-    }
-
-    .pill-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      flex-shrink: 0;
-    }
-
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-      margin-top: 1.8rem;
-    }
-
-    .btn {
-      position: relative;
-      border-radius: 999px;
-      padding: 0.8rem 1.4rem;
-      font-size: 0.9rem;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-weight: 500;
-      transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease,
-        border-color 0.16s ease;
-      white-space: nowrap;
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #7c3aed, #22c55e);
-      color: #f9fafb;
-      box-shadow: 0 10px 30px rgba(124, 58, 237, 0.55);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 48px rgba(124, 58, 237, 0.75);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      border: 1px solid var(--border-soft);
-      color: var(--muted);
-      backdrop-filter: blur(16px);
-    }
-
-    .btn-ghost:hover {
-      background: rgba(15, 23, 42, 0.7);
-      transform: translateY(-1px);
-    }
-
-    html[data-theme="light"] .btn-ghost:hover {
-      background: rgba(243, 244, 246, 0.9);
-    }
-
-    .btn-icon {
-      font-size: 1.1rem;
-      line-height: 1;
-    }
-
-    /* ==== NAVBAR ==== */
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(
-        to bottom,
-        rgba(15, 23, 42, 0.95),
-        rgba(15, 23, 42, 0.75),
-        transparent
-      );
-      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-    }
-
-    html[data-theme="light"] .nav {
-      background: linear-gradient(
-        to bottom,
-        rgba(249, 250, 251, 0.95),
-        rgba(249, 250, 251, 0.8),
-        transparent
-      );
-      border-bottom-color: rgba(148, 163, 184, 0.25);
-    }
-
-    .nav-inner {
-      height: var(--nav-height);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      min-width: 0;
-    }
-
-    .nav-logo {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      background: conic-gradient(
-        from 220deg,
-        #22c55e,
-        #7c3aed,
-        #f97316,
-        #22c55e
-      );
-      padding: 2px;
-      position: relative;
-      flex-shrink: 0;
-    }
-
-    .nav-logo-inner {
-      width: 100%;
-      height: 100%;
-      border-radius: inherit;
-      background: #020617;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #e5e7eb;
-      font-family: "Space Grotesk", system-ui, sans-serif;
-      font-weight: 700;
-      font-size: 0.9rem;
-    }
-
-    .nav-brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-      white-space: nowrap;
-    }
-
-    .nav-brand-main {
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .nav-brand-sub {
-      font-size: 0.7rem;
-      color: var(--muted);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.8rem;
-      font-size: 0.85rem;
-    }
-
-    .nav-link {
-      position: relative;
-      color: var(--muted);
-      text-decoration: none;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-size: 0.75rem;
-      cursor: pointer;
-      padding-block: 0.2rem;
-    }
-
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -0.35rem;
-      width: 0%;
-      height: 2px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #22c55e, #7c3aed);
-      transition: width 0.2s ease;
-    }
-
-    .nav-link:hover::after,
-    .nav-link--active::after {
-      width: 100%;
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      flex-shrink: 0;
-    }
-
-    .theme-toggle {
-      position: relative;
-      width: 36px;
-      height: 36px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      background: rgba(15, 23, 42, 0.4);
-      backdrop-filter: blur(18px);
-      transition: transform 0.16s ease, background 0.16s ease, box-shadow 0.16s ease,
-        border-color 0.16s ease;
-    }
-
-    html[data-theme="light"] .theme-toggle {
-      background: rgba(243, 244, 246, 0.8);
-    }
-
-    .theme-toggle:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.85);
-      background: rgba(15, 23, 42, 0.8);
-    }
-
-    html[data-theme="light"] .theme-toggle:hover {
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.18);
-    }
-
-    .theme-icon {
-      width: 18px;
-      height: 18px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-
-    .theme-icon-moon {
-      position: absolute;
-      opacity: 1;
-      transform: rotate(0deg);
-    }
-
-    .theme-icon-sun {
-      position: absolute;
-      opacity: 0;
-      transform: rotate(90deg);
-    }
-
-    html[data-theme="light"] .theme-icon-moon {
-      opacity: 0;
-      transform: rotate(-90deg);
-    }
-
-    html[data-theme="light"] .theme-icon-sun {
-      opacity: 1;
-      transform: rotate(0deg);
-    }
-
-    .theme-dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    @media (max-width: 800px) {
-      .nav-actions .theme-dropdown {
-        display: none;
-      }
-    }
-
-    .sidebar-theme-selector {
-      padding: 1rem 1.4rem;
-      border-top: 1px solid var(--border-soft);
-      border-bottom: 1px solid var(--border-soft);
-      flex-shrink: 0;
-    }
-
-    .sidebar-theme-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-      margin-bottom: 0.7rem;
-      display: block;
-    }
-
-    .sidebar-theme-options {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .sidebar-theme-option {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      padding: 0.7rem 0.9rem;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      color: var(--muted);
-      transition: all 0.2s ease;
-      border: 1px solid transparent;
-    }
-
-    .sidebar-theme-option:hover {
-      background: rgba(15, 23, 42, 0.6);
-      color: var(--text);
-      border-color: var(--border-soft);
-    }
-
-    html[data-theme="light"] .sidebar-theme-option:hover {
-      background: rgba(243, 244, 246, 0.9);
-    }
-
-    .sidebar-theme-option.active {
-      background: rgba(124, 58, 237, 0.15);
-      color: var(--text);
-      border-color: rgba(124, 58, 237, 0.3);
-    }
-
-    .sidebar-theme-option-icon {
-      width: 18px;
-      height: 18px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-    }
-
-    /* Theme change animation */
-    @keyframes themeChange {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.5;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-    body.theme-changing {
-      animation: themeChange 0.4s ease;
-    }
-
-    .sidebar-theme-option.active::after {
-      content: "✓";
-      margin-left: auto;
-      font-size: 0.9rem;
-      color: #7c3aed;
-    }
-
-    .theme-dropdown-menu {
-      position: absolute;
-      top: calc(100% + 0.5rem);
-      right: 0;
-      min-width: 180px;
-      background: var(--bg-glass);
-      backdrop-filter: blur(24px);
-      border: 1px solid var(--border-soft);
-      border-radius: 12px;
-      padding: 0.4rem;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.9);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-8px);
-      transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
-      z-index: 100;
-    }
-
-    html[data-theme="light"] .theme-dropdown-menu {
-      box-shadow: 0 10px 30px rgba(148, 163, 184, 0.3);
-    }
-
-    .theme-dropdown-menu.open {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .theme-option {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      padding: 0.65rem 0.9rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      color: var(--muted);
-      transition: background 0.16s ease, color 0.16s ease;
-    }
-
-    .theme-option:hover {
-      background: rgba(15, 23, 42, 0.6);
-      color: var(--text);
-    }
-
-    html[data-theme="light"] .theme-option:hover {
-      background: rgba(243, 244, 246, 0.9);
-    }
-
-    .theme-option.active {
-      background: rgba(124, 58, 237, 0.15);
-      color: var(--text);
-    }
-
-    .theme-option-icon {
-      width: 16px;
-      height: 16px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-    }
-
-    .nav-menu-toggle {
-      display: none;
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      cursor: pointer;
-      background: rgba(15, 23, 42, 0.6);
-      color: var(--text);
-      transition: transform 0.16s ease, background 0.16s ease;
-    }
-
-    html[data-theme="light"] .nav-menu-toggle {
-      background: rgba(243, 244, 246, 0.9);
-      color: var(--text);
-    }
-
-    .nav-menu-toggle:hover {
-      transform: translateY(-1px);
-      background: rgba(15, 23, 42, 0.8);
-    }
-
-    html[data-theme="light"] .nav-menu-toggle:hover {
-      background: rgba(243, 244, 246, 1);
-    }
-
-    @media (max-width: 900px) {
-      .nav-brand-sub {
-        display: block;
-      }
-    }
-
-    @media (max-width: 800px) {
-      .nav-links {
-        display: none;
-      }
-
-      .nav-menu-toggle {
-        display: inline-flex;
-      }
-    }
-
-    /* ==== HERO ==== */
-
-    .hero {
-      padding-top: 3.3rem;
-      padding-bottom: 4.5rem;
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-      gap: clamp(1.8rem, 3vw, 3rem);
-      align-items: center;
-    }
-
-    .hero-eyebrow {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.7rem;
-      margin-bottom: 1.7rem;
-    }
-
-    .hero-title {
-      font-family: "Space Grotesk", system-ui, sans-serif;
-      font-size: clamp(2.2rem, 3.3vw + 1.3rem, 3.6rem);
-      line-height: 1.05;
-      margin-bottom: 1rem;
-    }
-
-    .hero-title span.gradient {
-      background: linear-gradient(120deg, #a855f7, #22c55e, #f97316);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-subtitle {
-      font-size: 0.98rem;
-      color: var(--muted);
-      max-width: 540px;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .hero-meta-item {
-      padding: 0.6rem 0.8rem;
-      border-radius: 16px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      backdrop-filter: blur(20px);
-      background: radial-gradient(
-        circle at top left,
-        rgba(148, 163, 184, 0.25),
-        rgba(15, 23, 42, 0.9)
-      );
-      font-size: 0.78rem;
-      display: inline-flex;
-      flex-direction: column;
-      gap: 0.2rem;
-      min-width: 140px;
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
-    }
-
-    html[data-theme="light"] .hero-meta-item {
-      background: radial-gradient(
-        circle at top left,
-        rgba(209, 213, 219, 0.55),
-        rgba(249, 250, 251, 0.98)
-      );
-      box-shadow: 0 10px 24px rgba(148, 163, 184, 0.3);
-    }
-
-    .hero-meta-label {
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.65rem;
-      color: var(--muted);
-    }
-
-    .hero-meta-value {
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .hero-right {
-      position: relative;
-      min-height: 260px;
-    }
-
-    .hero-orbit {
-      position: absolute;
-      inset: -20px;
-      border-radius: 999px;
-      background:
-        radial-gradient(circle at top, rgba(56, 189, 248, 0.2), transparent 60%),
-        radial-gradient(circle at bottom, rgba(124, 58, 237, 0.4), transparent 70%);
-      filter: blur(18px);
-      opacity: 0.8;
-      pointer-events: none;
-    }
-
-    .hero-card {
-      position: relative;
-      height: 100%;
-      border-radius: 32px;
-      padding: 1.8rem 1.6rem;
-      background: radial-gradient(circle at top left, #111827, #020617 58%, #020617);
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(28px);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow: hidden;
-      isolation: isolate;
-    }
-
-    html[data-theme="light"] .hero-card {
-      background: radial-gradient(circle at top left, #e5e7eb, #f9fafb 60%);
-    }
-
-    .hero-card-profile-row {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .hero-profile-img-wrap {
-      width: 82px;
-      height: 82px;
-      border-radius: 999px;
-      padding: 3px;
-      background: conic-gradient(from 210deg, #22c55e, #7c3aed, #f97316, #22c55e);
-      position: relative;
-      flex-shrink: 0;
-    }
-
-    .hero-profile-img-wrap::before {
-      content: "";
-      position: absolute;
-      inset: 14%;
-      border-radius: inherit;
-      background: radial-gradient(circle at 30% 20%, rgba(248, 250, 252, 0.08), transparent);
-      pointer-events: none;
-    }
-
-    .hero-profile-img {
-      width: 100%;
-      height: 100%;
-      border-radius: inherit;
-      overflow: hidden;
-    }
-
-    .hero-profile-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-profile-text-main {
-      font-size: 1.05rem;
-      font-weight: 600;
-    }
-
-    .hero-profile-text-sub {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .hero-card-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.7rem;
-    }
-
-    .hero-chip {
-      border-radius: 999px;
-      padding: 0.25rem 0.7rem;
-      font-size: 0.72rem;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      color: var(--muted);
-      background: rgba(15, 23, 42, 0.8);
-    }
-
-    html[data-theme="light"] .hero-chip {
-      background: rgba(243, 244, 246, 0.9);
-    }
-
-    .hero-card-footer {
-      margin-top: 1.6rem;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.9rem;
-      font-size: 0.75rem;
-    }
-
-    .hero-card-footer-item {
-      border-radius: 16px;
-      border: 1px dashed rgba(148, 163, 184, 0.65);
-      padding: 0.6rem 0.7rem;
-      background: rgba(15, 23, 42, 0.8);
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-    }
-
-    html[data-theme="light"] .hero-card-footer-item {
-      background: rgba(249, 250, 251, 0.95);
-    }
-
-    .hero-card-footer-label {
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-    }
-
-    .hero-card-footer-value {
-      font-size: 0.82rem;
-    }
-
-
-    @media (max-width: 900px) {
-      .hero-inner {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .hero-right {
-        order: 2;
-      }
-      .hero-left {
-        order: 1;
-      }
-      .hero {
-        padding-top: 2.6rem;
-      }
-      .hero-card {
-        max-width: 420px;
-        margin: 0 auto;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero-card-footer {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .hero-card {
-        padding: 1.4rem 1.2rem;
-        border-radius: 24px;
-        margin-top: 2rem;
-      }
-      .hero-meta {
-        gap: 0.8rem;
-        margin-top: 1.5rem;
-      }
-      .hero-meta-item {
-        min-width: 100%;
-      }
-      .hero-right {
-        margin-top: 1.5rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-eyebrow {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .hero-title {
-        font-size: clamp(1.8rem, 4vw + 1rem, 2.4rem);
-        line-height: 1.1;
-      }
-      .hero-subtitle {
-        font-size: 0.9rem;
-        margin-top: 0.8rem;
-      }
-      .button-row {
-        margin-top: 1.5rem;
-        gap: 0.7rem;
-      }
-      .btn {
-        padding: 0.7rem 1.2rem;
-        font-size: 0.85rem;
-      }
-    }
-
-    /* ==== ABOUT & STATS ==== */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.2fr);
-      gap: 2.4rem;
-      align-items: flex-start;
-    }
-
-    .about-text {
-      font-size: 0.94rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .about-text p + p {
-      margin-top: 1rem;
-    }
-
-    .highlight {
-      color: #e5e7eb;
-      font-weight: 500;
-    }
-
-    html[data-theme="light"] .highlight {
-      color: #111827;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.2rem;
-    }
-
-    .stat-card {
-      border-radius: 20px;
-      border: 1px solid var(--border-soft);
-      background: var(--bg-glass);
-      backdrop-filter: blur(22px);
-      box-shadow: var(--shadow-soft);
-      padding: 1rem 1.1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-      min-height: 100px;
-    }
-
-    .stat-value {
-      font-family: "Space Grotesk", system-ui, sans-serif;
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
-
-    .stat-label {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    .stat-pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.4rem;
-    }
-
-    .stat-pill {
-      padding: 0.15rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      font-size: 0.7rem;
-      color: var(--muted);
-    }
-
-    @media (max-width: 900px) {
-      .about-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .stats-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    /* ==== SKILLS ==== */
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.3rem;
-    }
-
-    @media (max-width: 1000px) {
-      .skills-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .skills-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .skills-card {
-      border-radius: 18px;
-      padding: 1rem 1rem;
-      border: 1px solid var(--border-soft);
-      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 1));
-      backdrop-filter: blur(20px);
-    }
-
-    html[data-theme="light"] .skills-card {
-      background: radial-gradient(circle at top left, #e5e7eb, #f9fafb);
-    }
-
-    .skills-title-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 0.8rem;
-    }
-
-    .skills-title {
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .skills-icon {
-      font-size: 1.1rem;
-    }
-
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-    }
-
-    .skill-pill {
-      padding: 0.22rem 0.7rem;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      color: var(--muted);
-      background: rgba(15, 23, 42, 0.8);
-    }
-
-    html[data-theme="light"] .skill-pill {
-      background: rgba(249, 250, 251, 0.95);
-    }
-
-    /* ==== PROJECTS ==== */
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.4rem;
-    }
-
-    @media (max-width: 1000px) {
-      .projects-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .projects-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .project-card {
-      position: relative;
-      border-radius: 18px;
-      border: 1px solid var(--border-soft);
-      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.96));
-      padding: 0.9rem 0.9rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.16s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    }
-
-    html[data-theme="light"] .project-card {
-      background: radial-gradient(circle at top, rgba(243, 244, 246, 0.8), #ffffff);
-    }
-
-    .project-card::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background: radial-gradient(circle at top, rgba(124, 58, 237, 0.3), transparent 60%);
-      opacity: 0;
-      transition: opacity 0.2s ease;
-      pointer-events: none;
-    }
-
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.95);
-      border-color: rgba(124, 58, 237, 0.7);
-    }
-
-    html[data-theme="light"] .project-card:hover {
-      box-shadow: 0 18px 40px rgba(148, 163, 184, 0.45);
-    }
-
-    .project-card:hover::before {
-      opacity: 1;
-    }
-
-    .project-top-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.8rem;
-    }
-
-    .project-name {
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .project-tag {
-      font-size: 0.7rem;
-      padding: 0.15rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      color: var(--muted);
-      white-space: nowrap;
-    }
-
-    .project-description {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 0.2rem;
-    }
-
-    .project-meta-row {
-      margin-top: 0.4rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-      font-size: 0.72rem;
-      color: var(--muted);
-    }
-
-    .project-link-row {
-      margin-top: 0.6rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.78rem;
-      gap: 0.6rem;
-    }
-
-    .project-link {
-      text-decoration: none;
-      color: #a855f7;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    .project-link span {
-      font-size: 0.85rem;
-    }
-
-    /* ==== TIMELINE ==== */
-
-    .timeline {
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--border-soft);
-      background: var(--bg-glass);
-      padding: 1.5rem 1.4rem;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .timeline-list {
-      position: relative;
-      padding-left: 1.2rem;
-      margin-top: 0.4rem;
-    }
-
-    .timeline-list::before {
-      content: "";
-      position: absolute;
-      left: 4px;
-      top: 4px;
-      bottom: 4px;
-      width: 1px;
-      background: linear-gradient(to bottom, #22c55e, #7c3aed);
-      opacity: 0.65;
-    }
-
-    .timeline-item {
-      position: relative;
-      padding-left: 0.8rem;
-      margin-bottom: 1.1rem;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      left: -3px;
-      top: 0.25rem;
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 40% 35%, #f9fafb, #22c55e);
-      box-shadow: 0 0 10px rgba(34, 197, 94, 0.9);
-    }
-
-    .timeline-date {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-    }
-
-    .timeline-title {
-      font-size: 0.86rem;
-      font-weight: 500;
-      margin-top: 0.15rem;
-    }
-
-    .timeline-body {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 0.15rem;
-    }
-
-    /* ==== CONTENT & TEACHING ==== */
-
-    .dual-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 1.6rem;
-      align-items: flex-start;
-    }
-
-    @media (max-width: 900px) {
-      .dual-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .panel {
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--border-soft);
-      background: var(--bg-glass);
-      padding: 1.4rem 1.4rem 1.2rem;
-      box-shadow: var(--shadow-soft);
-      font-size: 0.87rem;
-      color: var(--muted);
-    }
-
-    .panel-title-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.7rem;
-      gap: 0.6rem;
-    }
-
-    .panel-title {
-      font-size: 0.96rem;
-      font-weight: 500;
-      color: var(--text);
-    }
-
-    .panel-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-      margin: 0.4rem 0 0.6rem;
-    }
-
-    .panel-tag {
-      font-size: 0.74rem;
-      border-radius: 999px;
-      padding: 0.18rem 0.65rem;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-    }
-
-    .panel-list {
-      list-style: none;
-      display: grid;
-      gap: 0.3rem;
-      margin-top: 0.4rem;
-      padding-left: 0;
-    }
-
-    .panel-list li {
-      position: relative;
-      padding-left: 0.9rem;
-    }
-
-    .panel-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #22c55e;
-    }
-
-    /* ==== CONTACT ==== */
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 2rem;
-      align-items: flex-start;
-    }
-
-    @media (max-width: 900px) {
-      .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .contact-footer {
-      margin-top: 1.8rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.4rem;
-    }
-
-    .contact-footer a {
-      color: #a855f7;
-      text-decoration: none;
-    }
-
-    .contact-footer a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-form {
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--border-soft);
-      background: var(--bg-glass);
-      padding: 1.3rem 1.3rem 1.4rem;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .form-row {
-      display: flex;
-      gap: 0.9rem;
-      margin-bottom: 0.8rem;
-      flex-wrap: wrap;
-    }
-
-    .form-field {
-      flex: 1;
-      min-width: 200px;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-      font-size: 0.8rem;
-    }
-
-    .form-field label {
-      color: var(--muted);
-    }
-
-    .form-field input,
-    .form-field textarea {
-      border-radius: 14px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      padding: 0.6rem 0.8rem;
-      font-size: 0.85rem;
-      font-family: inherit;
-      outline: none;
-      background: rgba(15, 23, 42, 0.8);
-      color: var(--text);
-      resize: vertical;
-      min-height: 42px;
-    }
-
-    html[data-theme="light"] .form-field input,
-    html[data-theme="light"] .form-field textarea {
-      background: rgba(249, 250, 251, 0.9);
-    }
-
-    .form-field input::placeholder,
-    .form-field textarea::placeholder {
-      color: #6b7280;
-    }
-
-    .form-field input:focus,
-    .form-field textarea:focus {
-      border-color: #7c3aed;
-      box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.4);
-    }
-
-    /* ==== FOOTER ==== */
-
-    .footer {
-      border-top: 1px solid rgba(148, 163, 184, 0.2);
-      padding: 1.6rem 0 1.8rem;
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-top: 1.5rem;
-    }
-
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer-links a {
-      text-decoration: none;
-      color: var(--muted);
-    }
-
-    .footer-links a:hover {
-      color: #a855f7;
-    }
-
-    /* ==== SCROLL REVEAL ==== */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 0.45s ease, transform 0.45s ease;
-    }
-
-    .reveal.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ==== SIDEBAR ==== */
-
-    .sidebar-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(4px);
-      z-index: 9998;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-
-    .sidebar-overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .sidebar {
-      position: fixed;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 280px;
-      max-width: 85vw;
-      background: var(--bg-glass);
-      backdrop-filter: blur(24px);
-      border-right: 1px solid var(--border-soft);
-      z-index: 9999;
-      transform: translateX(-100%);
-      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 4px 0 24px rgba(15, 23, 42, 0.9);
-      display: flex;
-      flex-direction: column;
-      overflow-y: auto;
-      overflow-x: hidden;
-    }
-
-    html[data-theme="light"] .sidebar {
-      box-shadow: 4px 0 24px rgba(148, 163, 184, 0.3);
-    }
-
-    .sidebar.open {
-      transform: translateX(0);
-    }
-
-    .sidebar-header {
-      padding: 1.2rem 1.4rem;
-      border-bottom: 1px solid var(--border-soft);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-shrink: 0;
-    }
-
-    .sidebar-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    .sidebar-logo-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: conic-gradient(
-        from 220deg,
-        #22c55e,
-        #7c3aed,
-        #f97316,
-        #22c55e
-      );
-      padding: 2px;
-      position: relative;
-      flex-shrink: 0;
-    }
-
-    .sidebar-logo-icon-inner {
-      width: 100%;
-      height: 100%;
-      border-radius: inherit;
-      background: #020617;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #e5e7eb;
-      font-family: "Space Grotesk", system-ui, sans-serif;
-      font-weight: 700;
-      font-size: 0.85rem;
-    }
-
-    html[data-theme="light"] .sidebar-logo-icon-inner {
-      background: #f9fafb;
-      color: #0f172a;
-    }
-
-    .sidebar-brand {
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .sidebar-close {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      cursor: pointer;
-      background: rgba(15, 23, 42, 0.4);
-      backdrop-filter: blur(18px);
-      transition: transform 0.16s ease, background 0.16s ease;
-      color: var(--text);
-    }
-
-    html[data-theme="light"] .sidebar-close {
-      background: rgba(243, 244, 246, 0.8);
-    }
-
-    .sidebar-close:hover {
-      transform: rotate(90deg);
-      background: rgba(15, 23, 42, 0.8);
-    }
-
-    .sidebar-nav {
-      flex: 1;
-      padding: 1.2rem 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-
-    .sidebar-link {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      padding: 0.85rem 1.4rem;
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
-      position: relative;
-    }
-
-    .sidebar-link-icon {
-      width: 18px;
-      height: 18px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-      opacity: 0.7;
-      transition: opacity 0.2s ease;
-    }
-
-    .sidebar-link:hover .sidebar-link-icon,
-    .sidebar-link.active .sidebar-link-icon {
-      opacity: 1;
-    }
-
-    .sidebar-link::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: linear-gradient(180deg, #22c55e, #7c3aed);
-      opacity: 0;
-      transition: opacity 0.2s ease;
-    }
-
-    .sidebar-link:hover,
-    .sidebar-link.active {
-      background: rgba(15, 23, 42, 0.6);
-      color: var(--text);
-      padding-left: 1.6rem;
-    }
-
-    html[data-theme="light"] .sidebar-link:hover,
-    html[data-theme="light"] .sidebar-link.active {
-      background: rgba(243, 244, 246, 0.9);
-    }
-
-    .sidebar-link:hover::before,
-    .sidebar-link.active::before {
-      opacity: 1;
-    }
-
-    .sidebar-footer {
-      padding: 1.2rem 1.4rem;
-      border-top: 1px solid var(--border-soft);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.8rem;
-      flex-shrink: 0;
-    }
-
-    .sidebar-footer-link {
-      width: 36px;
-      height: 36px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: transform 0.16s ease, background 0.16s ease, color 0.16s ease;
-      background: rgba(15, 23, 42, 0.4);
-    }
-
-    html[data-theme="light"] .sidebar-footer-link {
-      background: rgba(243, 244, 246, 0.8);
-    }
-
-    .sidebar-footer-link:hover {
-      transform: translateY(-2px);
-      background: rgba(15, 23, 42, 0.8);
-      color: var(--text);
-    }
-
-    .sidebar-copyright {
-      padding: 1rem 1.4rem;
-      text-align: center;
-      font-size: 0.75rem;
-      color: var(--muted);
-      border-top: 1px solid var(--border-soft);
-      flex-shrink: 0;
-    }
-
-    /* ==== MOBILE MENU ==== */
-
-    .nav-links-mobile {
-      display: none;
-    }
-
-    @media (min-width: 801px) {
-      .nav-links-mobile {
-        display: none !important;
-      }
-    }
-
-    /* Reduced motion support */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Friend - Privacy Policy & Features | Smart Money Manager</title>
+    <meta name="description"
+        content="Finance Friend Privacy Policy, Terms of Service, and complete feature guide. Download the smart money manager app for Android.">
+    <meta name="keywords"
+        content="Finance Friend, privacy policy, expense tracker, budget planner, money manager, Android finance app, Vinkal">
+    <meta name="author" content="Vinkal">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Finance Friend - Privacy Policy & Features">
+    <meta property="og:description"
+        content="Your personal finance companion. Track expenses, manage budgets, and achieve financial freedom.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Finance Friend">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Finance Friend - Privacy Policy & Features">
+    <meta name="twitter:description" content="Smart Money Manager for Android. Track, budget, and grow your wealth.">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a7a4e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="Assets/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ============================================
+           DESIGN SYSTEM / CSS VARIABLES
+           ============================================ */
+        :root {
+            /* Light Mode (Default) */
+            --primary: #1a7a4e;
+            --primary-dark: #145e3c;
+            --primary-light: #22a56a;
+            --primary-glow: rgba(26, 122, 78, 0.15);
+            --accent: #10b981;
+            --accent-light: #059669;
+
+            --bg-body: #f8fafb;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f0fdf4;
+            --bg-glass: rgba(255, 255, 255, 0.85);
+            --bg-hero: linear-gradient(180deg, #eef7f2 0%, #f8fafb 100%);
+            --bg-sidebar: #ffffff;
+
+            --border-color: rgba(0, 0, 0, 0.07);
+            --border-strong: rgba(0, 0, 0, 0.12);
+
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+
+            --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+            --shadow-glow: 0 4px 24px rgba(26, 122, 78, 0.1);
+            --shadow-sidebar: 4px 0 30px rgba(0, 0, 0, 0.12);
+
+            --gradient-primary: linear-gradient(135deg, #1a7a4e, #10b981);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Dark Mode */
+        [data-theme="dark"] {
+            --bg-body: #0a0f1a;
+            --bg-card: #111827;
+            --bg-card-hover: #1a2235;
+            --bg-glass: rgba(17, 24, 39, 0.85);
+            --bg-hero: linear-gradient(180deg, #0a1628 0%, #0a0f1a 100%);
+            --bg-sidebar: #111827;
+
+            --border-color: rgba(255, 255, 255, 0.06);
+            --border-strong: rgba(255, 255, 255, 0.1);
+
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+
+            --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+            --shadow-glow: 0 0 40px rgba(26, 122, 78, 0.15);
+            --shadow-sidebar: 4px 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-body);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            transition: background var(--transition), color var(--transition);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-light);
+        }
+
+        ::selection {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-body);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-dark);
+            border-radius: 3px;
+        }
+
+        /* ============================================
+           LAYOUT
+           ============================================ */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* ============================================
+           SIDEBAR OVERLAY
+           ============================================ */
+        .sidebar-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition);
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ============================================
+           SIDEBAR
+           ============================================ */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 100vh;
+            background: var(--bg-sidebar);
+            z-index: 1999;
+            transform: translateX(-100%);
+            transition: transform var(--transition);
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-sidebar);
+            border-right: 1px solid var(--border-color);
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sidebar-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--text-primary);
+        }
+
+        .sidebar-brand .icon {
+            width: 34px;
+            height: 34px;
+            background: var(--gradient-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .sidebar-close {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all var(--transition);
+        }
+
+        .sidebar-close:hover {
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
+        }
+
+        .sidebar-nav {
+            flex: 1;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all var(--transition);
+        }
+
+        .sidebar-nav a:hover {
+            background: var(--bg-card-hover);
+            color: var(--primary);
+        }
+
+        .sidebar-nav a .nav-icon {
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .sidebar-divider {
+            height: 1px;
+            background: var(--border-color);
+            margin: 12px 0;
+        }
+
+        /* Theme toggle in sidebar */
+        .theme-toggle-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+        }
+
+        .theme-toggle-label {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .theme-toggle-label .nav-icon {
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        /* Toggle Switch */
+        .toggle-switch {
+            position: relative;
+            width: 48px;
+            height: 26px;
+            cursor: pointer;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-track {
+            position: absolute;
+            inset: 0;
+            background: #cbd5e1;
+            border-radius: 26px;
+            transition: background var(--transition);
+        }
+
+        .toggle-track::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            transition: transform var(--transition);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        .toggle-switch input:checked+.toggle-track {
+            background: var(--primary);
+        }
+
+        .toggle-switch input:checked+.toggle-track::after {
+            transform: translateX(22px);
+        }
+
+        .sidebar-footer {
+            padding: 16px 24px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* ============================================
+           NAVIGATION
+           ============================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 14px 0;
+            transition: all var(--transition);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: var(--bg-glass);
+        }
+
+        .navbar.scrolled {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .menu-btn {
+            display: none;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 1.3rem;
+            transition: all var(--transition);
+        }
+
+        .menu-btn:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .nav-brand .icon {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            padding: 8px 16px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+            background: var(--bg-card-hover);
+        }
+
+        .nav-cta {
+            padding: 10px 24px !important;
+            background: var(--gradient-primary);
+            color: #fff !important;
+            border-radius: 50px !important;
+            font-weight: 600 !important;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--primary-glow);
+            background: var(--gradient-primary) !important;
+        }
+
+        /* Desktop theme toggle */
+        .nav-theme-btn {
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all var(--transition);
+        }
+
+        .nav-theme-btn:hover {
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
+            border-color: var(--border-strong);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: var(--bg-hero);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 160px;
+            background: linear-gradient(to top, var(--bg-body), transparent);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px 6px 10px;
+            background: rgba(26, 122, 78, 0.08);
+            border: 1px solid rgba(26, 122, 78, 0.2);
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 28px;
+            animation: fadeInDown 0.6s ease-out;
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5.5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            animation: fadeInUp 0.7s ease-out;
+        }
+
+        .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 540px;
+            margin: 0 auto 36px;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.1s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.9s ease-out 0.2s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            transition: all var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: #fff;
+            box-shadow: 0 4px 20px var(--primary-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 40px var(--primary-glow);
+            color: #fff;
+        }
+
+        .btn-outline {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1.5px solid var(--border-strong);
+            box-shadow: var(--shadow-card);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            color: var(--text-primary);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 56px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat .number {
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat .label {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* ============================================
+           FEATURES
+           ============================================ */
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 5px 14px;
+            background: rgba(26, 122, 78, 0.08);
+            border: 1px solid rgba(26, 122, 78, 0.15);
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .feature-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(26, 122, 78, 0.2);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(26, 122, 78, 0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* ============================================
+           POLICY / TERMS SECTIONS
+           ============================================ */
+        .policy-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 48px;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: var(--shadow-card);
+        }
+
+        .policy-content h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .policy-content h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .policy-content p,
+        .policy-content li {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .policy-content ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        .policy-content li {
+            margin-bottom: 6px;
+        }
+
+        .policy-content li::marker {
+            color: var(--primary);
+        }
+
+        .last-updated {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(26, 122, 78, 0.06);
+            border: 1px solid rgba(26, 122, 78, 0.1);
+            border-radius: 6px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        /* ============================================
+           DOWNLOAD CTA
+           ============================================ */
+        .download-cta {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-cta::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-card {
+            position: relative;
+            z-index: 2;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 56px 40px;
+            max-width: 680px;
+            margin: 0 auto;
+            box-shadow: var(--shadow-card);
+        }
+
+        .cta-card h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        .cta-card p {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-size: 1.05rem;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-text {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           RESPONSIVE — TABLET (<=1024px)
+           ============================================ */
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ============================================
+           RESPONSIVE — MOBILE (<=768px)
+           ============================================ */
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            /* Show hamburger, hide desktop nav items */
+            .menu-btn {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-theme-btn {
+                display: none;
+            }
+
+            /* Features single column on mobile */
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-stats {
+                gap: 24px;
+                flex-wrap: wrap;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .policy-content {
+                padding: 24px 18px;
+            }
+
+            .cta-card {
+                padding: 36px 20px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        /* ============================================
+           RESPONSIVE — SMALL PHONES (<=480px)
+           ============================================ */
+        @media (max-width: 480px) {
+            .sidebar {
+                width: 280px;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero-stats {
+                gap: 16px;
+            }
+
+            .stat .number {
+                font-size: 1.3rem;
+            }
+
+            .feature-card {
+                padding: 22px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <!-- NAVBAR -->
-  <header class="nav">
-    <div class="container">
-      <div class="nav-inner">
-        <div class="nav-left">
-          <a href="#hero" class="nav-logo" aria-label="Go to top">
-            <div class="nav-logo-inner">VP</div>
-          </a>
-          <div class="nav-brand-text">
-            <span class="nav-brand-main">Vinkal Prajapati</span>
-            <span class="nav-brand-sub">Developer • Educator • Founder</span>
-          </div>
-        </div>
 
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="#hero" class="nav-link nav-link--active">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#skills" class="nav-link">Skills</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#teaching" class="nav-link">Teaching</a>
-          <a href="#contact" class="nav-link">Contact</a>
+    <!-- ==================== SIDEBAR OVERLAY ==================== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <span class="icon">💰</span>
+                Finance Friend
+            </div>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#features" class="sidebar-link">
+                <span class="nav-icon">✨</span>
+                Features
+            </a>
+            <a href="#privacy" class="sidebar-link">
+                <span class="nav-icon">🔒</span>
+                Privacy Policy
+            </a>
+            <a href="#terms" class="sidebar-link">
+                <span class="nav-icon">📄</span>
+                Terms of Service
+            </a>
+            <a href="#download" class="sidebar-link">
+                <span class="nav-icon">📥</span>
+                Download App
+            </a>
+            <div class="sidebar-divider"></div>
+            <div class="theme-toggle-row">
+                <div class="theme-toggle-label">
+                    <span class="nav-icon" id="themeIconSidebar">🌙</span>
+                    Dark Mode
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="themeToggleSidebar">
+                    <span class="toggle-track"></span>
+                </label>
+            </div>
         </nav>
+        <div class="sidebar-footer">
+            © 2026 Finance Friend by Vinkal
+        </div>
+    </aside>
 
-        <div class="nav-actions">
-          <div class="theme-dropdown">
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-              <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-              </svg>
-              <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
-            </button>
-            <div class="theme-dropdown-menu" id="themeDropdown">
-              <div class="theme-option" data-theme="dark">
-                <svg class="theme-option-icon" viewBox="0 0 24 24">
-                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-                <span>Dark Mode</span>
-              </div>
-              <div class="theme-option" data-theme="light">
-                <svg class="theme-option-icon" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="5"></circle>
-                  <line x1="12" y1="1" x2="12" y2="3"></line>
-                  <line x1="12" y1="21" x2="12" y2="23"></line>
-                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                  <line x1="1" y1="12" x2="3" y2="12"></line>
-                  <line x1="21" y1="12" x2="23" y2="12"></line>
-                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-                <span>Light Mode</span>
-              </div>
-              <div class="theme-option" data-theme="system">
-                <svg class="theme-option-icon" viewBox="0 0 24 24">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                  <line x1="8" y1="21" x2="16" y2="21"></line>
-                  <line x1="12" y1="17" x2="12" y2="21"></line>
-                </svg>
-                <span>System Default</span>
-              </div>
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <div class="nav-left">
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+                <a href="#" class="nav-brand">
+                    <span class="icon">💰</span>
+                    Finance Friend
+                </a>
             </div>
-          </div>
-          <button
-            class="nav-menu-toggle"
-            id="menuToggle"
-            aria-label="Toggle navigation menu"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms</a></li>
+                <li><a href="#download" class="nav-cta">Download App</a></li>
+            </ul>
+            <button class="nav-theme-btn" id="themeToggleNav" aria-label="Toggle theme"
+                title="Toggle Dark Mode">🌙</button>
         </div>
-      </div>
-
-      <nav
-        class="nav-links-mobile"
-        id="mobileNav"
-        aria-label="Mobile navigation"
-      >
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- SIDEBAR -->
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-      <div class="sidebar-logo">
-        <div class="sidebar-logo-icon">
-          <div class="sidebar-logo-icon-inner">VP</div>
-        </div>
-        <span class="sidebar-brand">Vinkal</span>
-      </div>
-      <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">
-        ✕
-      </button>
-    </div>
-    <nav class="sidebar-nav">
-      <a href="#hero" class="sidebar-link active">
-        <svg class="sidebar-link-icon" viewBox="0 0 24 24">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-          <polyline points="9 22 9 12 15 12 15 22"></polyline>
-        </svg>
-        <span>Home</span>
-      </a>
-      <a href="#about" class="sidebar-link">
-        <svg class="sidebar-link-icon" viewBox="0 0 24 24">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
-        </svg>
-        <span>About</span>
-      </a>
-      <a href="#skills" class="sidebar-link">
-        <svg class="sidebar-link-icon" viewBox="0 0 24 24">
-          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-        </svg>
-        <span>Skills</span>
-      </a>
-      <a href="#projects" class="sidebar-link">
-        <svg class="sidebar-link-icon" viewBox="0 0 24 24">
-          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-          <line x1="8" y1="21" x2="16" y2="21"></line>
-          <line x1="12" y1="17" x2="12" y2="21"></line>
-        </svg>
-        <span>Projects</span>
-      </a>
-      <a href="#teaching" class="sidebar-link">
-        <svg class="sidebar-link-icon" viewBox="0 0 24 24">
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-        </svg>
-        <span>Teaching</span>
-      </a>
-      <a href="#contact" class="sidebar-link">
-        <svg class="sidebar-link-icon" viewBox="0 0 24 24">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-          <polyline points="22,6 12,13 2,6"></polyline>
-        </svg>
-        <span>Contact</span>
-      </a>
     </nav>
-    <div class="sidebar-theme-selector">
-      <span class="sidebar-theme-label">Theme</span>
-      <div class="sidebar-theme-options">
-        <div class="sidebar-theme-option" data-theme="dark">
-          <svg class="sidebar-theme-option-icon" viewBox="0 0 24 24">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <span>Dark Mode</span>
-        </div>
-        <div class="sidebar-theme-option" data-theme="light">
-          <svg class="sidebar-theme-option-icon" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <span>Light Mode</span>
-        </div>
-        <div class="sidebar-theme-option" data-theme="system">
-          <svg class="sidebar-theme-option-icon" viewBox="0 0 24 24">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-            <line x1="8" y1="21" x2="16" y2="21"></line>
-            <line x1="12" y1="17" x2="12" y2="21"></line>
-          </svg>
-          <span>System Default</span>
-        </div>
-      </div>
-    </div>
-    <div class="sidebar-footer">
-      <a href="https://github.com/Vinkal93" target="_blank" rel="noreferrer" class="sidebar-footer-link" aria-label="GitHub">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-        </svg>
-      </a>
-      <a href="https://dev.to/vinkalprajapati" target="_blank" rel="noreferrer" class="sidebar-footer-link" aria-label="Dev.to">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6v4.5h.6c.38 0 .66-.07.84-.23.18-.16.27-.42.27-.78v-2.93c0-.36-.09-.62-.27-.78zM13.5 10.41c0 .36-.09.62-.27.78-.18.16-.46.23-.84.23h-.6v-4.5h.6c.38 0 .66.07.84.23.18.16.27.42.27.78v2.48zM20.25 10.5c0 .36-.09.62-.27.78-.18.16-.46.23-.84.23h-.6v-4.5h.6c.38 0 .66.07.84.23.18.16.27.42.27.78v2.48z"/>
-        </svg>
-      </a>
-      <a href="https://vinkal041.hashnode.dev" target="_blank" rel="noreferrer" class="sidebar-footer-link" aria-label="Hashnode">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M22.351 8.019l-6.37-6.37a5.63 5.63 0 0 0-7.962 0l-6.37 6.37a5.63 5.63 0 0 0 0 7.962l6.37 6.37a5.63 5.63 0 0 0 7.962 0l6.37-6.37a5.63 5.63 0 0 0 0-7.962zM12 15.953a3.953 3.953 0 1 1 0-7.906 3.953 3.953 0 0 1 0 7.906z"/>
-        </svg>
-      </a>
-    </div>
-    <div class="sidebar-copyright">
-      © <span id="sidebarYear"></span> Vinkal Prajapati
-    </div>
-  </aside>
 
-  <!-- HERO -->
-  <main>
-    <section class="hero section" id="hero">
-      <div class="container hero-inner">
-        <div class="hero-left reveal">
-          <div class="hero-eyebrow">
-            <span class="tag">
-              <span class="tag-dot"></span>
-              Quantum Institute • Founder & Educator
-            </span>
-            <span class="pill">
-              <span class="pill-dot"></span>
-              Web • Mobile • AI Experiences
-            </span>
-          </div>
-
-          <h1 class="hero-title">
-            Building <span class="gradient">modern products</span> &
-            empowering learners through tech.
-          </h1>
-
-          <p class="hero-subtitle">
-            I’m Vinkal Prajapati, a developer, educator, and founder obsessed with
-            crafting clean digital experiences and teaching the next generation of
-            creators. From utility apps and calculators to learning platforms and
-            AI-powered tools, I ship ideas that actually get used.
-          </p>
-
-          <div class="button-row">
-            <a href="#projects" class="btn btn-primary">
-              View selected work
-              <span class="btn-icon">↗</span>
-            </a>
-            <a href="#contact" class="btn btn-ghost">
-              Let’s build something
-            </a>
-          </div>
-
-          <div class="hero-meta">
-            <div class="hero-meta-item">
-              <span class="hero-meta-label">Focus</span>
-              <span class="hero-meta-value">Web & app development, UI/UX, AI-integrated tools</span>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Available on Google Play Store
             </div>
-            <div class="hero-meta-item">
-              <span class="hero-meta-label">Roles</span>
-              <span class="hero-meta-value">Founder • Developer • Educator • Content Creator</span>
+            <h1>Your Personal<br><span class="gradient-text">Finance Friend</span></h1>
+            <p>Track expenses, manage budgets, set savings goals, and achieve financial freedom with smart AI-powered
+                insights. Take control of your money today.</p>
+            <div class="hero-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.financefriend.app"
+                    class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Download on Play Store
+                </a>
+                <a href="#features" class="btn btn-outline">Explore Features ↓</a>
             </div>
-            <div class="hero-meta-item">
-              <span class="hero-meta-label">Based in</span>
-              <span class="hero-meta-value">Uttar Pradesh, India</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-right reveal">
-          <div class="hero-orbit" aria-hidden="true"></div>
-          <div class="hero-card">
-            <div class="hero-card-profile-row">
-              <div class="hero-profile-img-wrap">
-                <div class="hero-profile-img">
-                  <!-- 👉 Apni image ka sahi path yaha daalo -->
-                  <img
-                    src="assets/vinkal-profile.png"
-                    alt="Portrait of Vinkal Prajapati"
-                    loading="lazy"
-                    decoding="async"
-                  />
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="number">20+</div>
+                    <div class="label">Powerful Features</div>
                 </div>
-              </div>
-              <div>
-                <div class="hero-profile-text-main">Vinkal Prajapati</div>
-                <div class="hero-profile-text-sub">
-                  Founder & Educator @ Quantum Institute<br />
-                  Web & Mobile Developer • UI/UX • AI tools
+                <div class="stat">
+                    <div class="number">100%</div>
+                    <div class="label">Free to Use</div>
                 </div>
-                <div class="hero-card-badges">
-                  <span class="hero-chip">Chrome Extension Creator</span>
-                  <span class="hero-chip">Dev.to Author</span>
-                  <span class="hero-chip">YouTube Educator</span>
+                <div class="stat">
+                    <div class="number">🔒</div>
+                    <div class="label">Your Data is Private</div>
                 </div>
-              </div>
             </div>
-
-            <div class="hero-card-footer">
-              <div class="hero-card-footer-item">
-                <span class="hero-card-footer-label">Craft</span>
-                <span class="hero-card-footer-value">
-                  Product-minded developer focused on delightful interfaces and
-                  real-world impact.
-                </span>
-              </div>
-              <div class="hero-card-footer-item">
-                <span class="hero-card-footer-label">Teaching</span>
-                <span class="hero-card-footer-value">
-                  Quantum Institute – guiding students in Computer, CCC, and
-                  practical tech skills.
-                </span>
-              </div>
-              <div class="hero-card-footer-item">
-                <span class="hero-card-footer-label">Platforms</span>
-                <span class="hero-card-footer-value">
-                  GitHub • Dev.to • Hashnode • Blogger • YouTube
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-kicker">Profile</span>
-          <div>
-            <h2 class="section-title">The educator-developer behind Quantum Institute.</h2>
-            <p class="section-subtitle">
-              I bridge three worlds: building products, teaching technology, and
-              creating content that makes complex concepts feel approachable.
-            </p>
-          </div>
+    <!-- ==================== FEATURES ==================== -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Features</span>
+                <h2>Everything You Need to Manage Money</h2>
+                <p>Finance Friend packs 20+ powerful tools into one beautifully designed app</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📊</div>
+                    <h3>Smart Dashboard</h3>
+                    <p>Get a real-time overview of your finances with a fully customizable dashboard. View balances,
+                        recent transactions, and spending trends at a glance.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">💸</div>
+                    <h3>Expense & Income Tracking</h3>
+                    <p>Easily add, edit, and categorize all your transactions. Support for multiple categories, tags,
+                        notes, and recurring entries makes tracking effortless.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📈</div>
+                    <h3>Analytics & Charts</h3>
+                    <p>Visualize your spending patterns with beautiful, interactive charts. See category breakdowns,
+                        daily/weekly/monthly trends, and income vs expense comparisons.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">💰</div>
+                    <h3>Budget Management</h3>
+                    <p>Set monthly or category-wise budgets and track progress in real time. Get notifications when
+                        you're approaching or exceeding your limits.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Savings Goals</h3>
+                    <p>Set financial goals — whether it's a vacation, emergency fund, or a new gadget. Track your
+                        progress and celebrate milestones along the way.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🏥</div>
+                    <h3>Financial Health Score</h3>
+                    <p>Get a personalized financial health score based on your spending habits, savings rate, and budget
+                        adherence. Receive actionable tips to improve it.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Bill Reminders</h3>
+                    <p>Never miss a payment. Set reminders for rent, utilities, subscriptions, and more. Get notified
+                        before due dates so you stay on top of every bill.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">👥</div>
+                    <h3>Split Expenses</h3>
+                    <p>Easily split bills with friends, roommates, or family. Calculate each person's share instantly
+                        and keep track of who owes what.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📱</div>
+                    <h3>Subscription Tracker</h3>
+                    <p>Track all your recurring subscriptions — Netflix, Spotify, gym, cloud storage, and more. See
+                        total monthly cost and identify subscriptions you can cancel.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🏦</div>
+                    <h3>EMI Calculator</h3>
+                    <p>Calculate EMIs for loans instantly. Input principal, interest rate, and tenure to get exact
+                        monthly payments, total interest, and amortization details.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">💹</div>
+                    <h3>Cash Flow Analysis</h3>
+                    <p>Monitor your income vs expenses over time with detailed cash flow analysis. Understand where your
+                        money goes and identify trends to optimize spending.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Net Worth Tracker</h3>
+                    <p>Track your total assets and liabilities to calculate your real net worth. Add bank accounts,
+                        investments, properties, loans, and credit card balances.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Savings Challenges</h3>
+                    <p>Make saving fun with built-in challenges like the 52-week challenge, no-spend days, and custom
+                        goals. Stay motivated and build better financial habits.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📋</div>
+                    <h3>Monthly Summary Reports</h3>
+                    <p>Get comprehensive monthly financial reports showing total income, expenses, savings rate, top
+                        categories, and comparison with previous months.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🏷️</div>
+                    <h3>Smart Tags</h3>
+                    <p>Intelligent tagging system that automatically categorizes your transactions. Create custom tags,
+                        filter by tags, and get insights on tagged spending patterns.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📝</div>
+                    <h3>Transaction Templates</h3>
+                    <p>Create templates for frequently used transactions. Add recurring expenses like rent, groceries,
+                        or subscriptions with just one tap using saved templates.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📊</div>
+                    <h3>Custom Report Builder</h3>
+                    <p>Build custom financial reports by selecting date ranges, categories, and data points. Export
+                        reports for personal records or sharing with financial advisors.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Customizable Dashboard</h3>
+                    <p>Personalize your home screen by choosing which widgets and data cards to display. Arrange them in
+                        your preferred order for the perfect financial overview.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🔒</div>
+                    <h3>App Lock & Security</h3>
+                    <p>Protect your sensitive financial data with a PIN lock. Your information stays private and secure,
+                        accessible only to you.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🌙</div>
+                    <h3>Dark Mode</h3>
+                    <p>Enjoy a beautiful dark theme that's easy on the eyes. Perfect for nighttime use and helps save
+                        battery on AMOLED screens.</p>
+                </div>
+            </div>
         </div>
-
-        <div class="about-grid">
-          <div class="about-text reveal">
-            <p>
-              I started as a self-driven web developer, experimenting with HTML, CSS,
-              JavaScript, and tools like Java, Python, and Swift. Over time, that
-              curiosity turned into a discipline for building
-              <span class="highlight">polished, production-ready experiences</span> –
-              from calculators and dashboards to full learning products and
-              mobile-friendly tools.
-            </p>
-            <p>
-              As <span class="highlight">Founder & Educator at Quantum Institute</span>,
-              I help learners move beyond just “notes” and “theory”. I design
-              practical content, live sessions, and digital tools that train real
-              skills – especially for Computer, CCC, and competitive exam-focused
-              students.
-            </p>
-            <p>
-              Alongside that, I write and share projects on platforms like
-              <span class="highlight">Dev.to</span>, <span class="highlight">Hashnode</span>,
-              and <span class="highlight">Blogger</span>, plus utilities like
-              Chrome extensions and interactive tools. For me, shipping is
-              non-negotiable: an idea only counts once it’s live, usable, and
-              improving someone’s day.
-            </p>
-          </div>
-
-          <div class="stats-grid reveal">
-            <div class="stat-card">
-              <div class="stat-value">Product-first dev</div>
-              <div class="stat-label">
-                Strong focus on UX, micro-interactions, and performance-minded front-end.
-              </div>
-              <div class="stat-pill-row">
-                <span class="stat-pill">Clean UI</span>
-                <span class="stat-pill">Responsive</span>
-                <span class="stat-pill">Mobile-ready</span>
-              </div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-value">Educator & mentor</div>
-              <div class="stat-label">
-                Designing courses, explaining concepts simply, and building tools that help students practice.
-              </div>
-              <div class="stat-pill-row">
-                <span class="stat-pill">CCC</span>
-                <span class="stat-pill">Computer basics</span>
-                <span class="stat-pill">Exam prep</span>
-              </div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-value">Tooling & utilities</div>
-              <div class="stat-label">
-                Apps, calculators, and utilities – from finance tools to typing tests and color pickers.
-              </div>
-              <div class="stat-pill-row">
-                <span class="stat-pill">Chrome extension</span>
-                <span class="stat-pill">Dev utilities</span>
-              </div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-value">Always learning</div>
-              <div class="stat-label">
-                Exploring blockchain, AI integration, and modern web patterns to build future-ready products.
-              </div>
-              <div class="stat-pill-row">
-                <span class="stat-pill">AI + UI</span>
-                <span class="stat-pill">Blockchain basics</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-kicker">Skills & Stack</span>
-          <div>
-            <h2 class="section-title">Design-driven engineering with a strong front-end core.</h2>
-            <p class="section-subtitle">
-              I’m comfortable moving from Figma-level thinking to actual shipped code –
-              with a focus on readable structure, component-like thinking, and
-              performance.
-            </p>
-          </div>
+    <!-- ==================== PRIVACY POLICY ==================== -->
+    <section class="policy" id="privacy">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Legal</span>
+                <h2>Privacy Policy</h2>
+                <p>Your privacy matters to us. Read the full policy or <a href="privacy.html">view the dedicated Privacy Policy page</a>.</p>
+            </div>
+            <div class="policy-content reveal">
+                <span class="last-updated">Last Updated: May 1, 2026</span>
+                <h3>1. Introduction</h3>
+                <p>Finance Friend ("we", "our", or "us") is a personal finance management application developed by
+                    Vinkal. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect information when you use our mobile application ("App"), available under package name <strong>com.vinkal.financefriend</strong>.</p>
+                <h3>2. Information We Collect</h3>
+                <p>Finance Friend is designed with a <strong>privacy-first, offline-first approach</strong>.</p>
+                <p><strong>A) Data Stored Locally on Your Device:</strong></p>
+                <ul>
+                    <li><strong>Financial Data:</strong> Transaction records (income, expenses), budget settings,
+                        savings goals, bill reminders, subscription details, EMI calculations, net worth entries, and
+                        other financial data you manually enter.</li>
+                    <li><strong>Preferences:</strong> App settings, theme preferences, dashboard customization,
+                        notification preferences, and currency settings.</li>
+                    <li><strong>Security Data:</strong> Your app lock PIN (stored locally in encrypted form).</li>
+                </ul>
+                <p>All the above data is stored <strong>entirely on your device</strong>. No user accounts or login credentials are required. We do not operate any cloud servers or databases.</p>
+                <p><strong>B) Data Collected by Third-Party Services (Google AdMob):</strong></p>
+                <p>Finance Friend uses <strong>Google AdMob</strong> to display advertisements. When ads are displayed, Google AdMob may automatically collect:</p>
+                <ul>
+                    <li><strong>Device Identifiers:</strong> Advertising ID (Google Advertising ID / AAID)</li>
+                    <li><strong>IP Address:</strong> Your device's Internet Protocol address</li>
+                    <li><strong>Device Information:</strong> Device model, OS version, screen size, language settings</li>
+                    <li><strong>App Interaction Data:</strong> Ad impressions, clicks, and engagement data</li>
+                </ul>
+                <p><em>This data collection is performed by <strong>Google</strong>, not by Finance Friend directly. We do not have access to or store any of this data. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</em></p>
+                <h3>3. Advertisements & Google AdMob</h3>
+                <p>Finance Friend is a <strong>free, ad-supported</strong> application. We use Google AdMob to display banner, interstitial, and rewarded ads.</p>
+                <ul>
+                    <li><strong>Personalized Ads:</strong> Google may use your Advertising ID and browsing history to show relevant ads.</li>
+                    <li><strong>Non-Personalized Ads:</strong> If you opt out of ad personalization, you will still see ads but they won't be based on your personal data.</li>
+                    <li><strong>Internet Requirement:</strong> While core App features work offline, an internet connection is needed for loading ads.</li>
+                </ul>
+                <h3>4. Third-Party Services</h3>
+                <p>Finance Friend integrates the following third-party service:</p>
+                <ul>
+                    <li><strong>Google AdMob</strong> (by Google LLC) — for displaying advertisements. Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></li>
+                    <li><strong>Google Play Services</strong> (by Google LLC) — for app distribution & updates.</li>
+                </ul>
+                <p>We do not use any analytics tools (Google Analytics, Firebase Analytics, etc.) to track usage behavior.</p>
+                <h3>5. Data We Do NOT Collect</h3>
+                <ul>
+                    <li>We do <strong>NOT</strong> collect your name, email, phone number, or personal identification through the App.</li>
+                    <li>We do <strong>NOT</strong> access your contacts, camera, microphone, or GPS location.</li>
+                    <li>We do <strong>NOT</strong> sell, rent, or share your locally stored data with third parties.</li>
+                    <li>We do <strong>NOT</strong> track your usage behavior or create user profiles.</li>
+                </ul>
+                <h3>6. Data Export & Backup</h3>
+                <p>Finance Friend allows you to export your financial data. Exported files are saved directly to your device. No data is uploaded to any server during export.</p>
+                <h3>7. Local Notifications</h3>
+                <p>Notifications for bill reminders and budget alerts are generated entirely on your device without any server communication.</p>
+                <h3>8. Your Rights & Choices</h3>
+                <ul>
+                    <li><strong>Delete Data:</strong> Use "Clear All Data" in Settings, clear App data via device settings, or uninstall the App.</li>
+                    <li><strong>Reset Advertising ID:</strong> Settings → Google → Ads → Reset Advertising ID.</li>
+                    <li><strong>Opt-Out of Personalized Ads:</strong> Settings → Google → Ads → Opt out of Ads Personalization.</li>
+                </ul>
+                <h3>9. Children's Privacy</h3>
+                <p>Finance Friend is not directed at children under 13. We do not knowingly collect personal information from children. Ads displayed are configured for general audiences.</p>
+                <h3>10. Security</h3>
+                <ul>
+                    <li>Optional PIN lock to prevent unauthorized access.</li>
+                    <li>All personal financial data stays on your device.</li>
+                    <li>No cloud storage means no risk of server-side data breaches.</li>
+                </ul>
+                <h3>11. Changes to This Policy</h3>
+                <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use of the App constitutes acceptance.</p>
+                <h3>12. Contact Us</h3>
+                <ul>
+                    <li><strong>Developer:</strong> Vinkal</li>
+                    <li><strong>Email:</strong> <a href="mailto:vinkal93041@gmail.com">vinkal93041@gmail.com</a></li>
+                    <li><strong>Package:</strong> com.vinkal.financefriend</li>
+                </ul>
+                <p style="margin-top:20px;"><a href="privacy.html" style="font-weight:600;">📄 View Full Privacy Policy →</a></p>
+            </div>
         </div>
-
-        <div class="skills-grid">
-          <div class="skills-card reveal">
-            <div class="skills-title-row">
-              <div class="skills-title">Frontend</div>
-              <div class="skills-icon">🖥️</div>
-            </div>
-            <div class="skills-list">
-              <span class="skill-pill">HTML5</span>
-              <span class="skill-pill">CSS3</span>
-              <span class="skill-pill">JavaScript (ES6+)</span>
-              <span class="skill-pill">Responsive UI</span>
-              <span class="skill-pill">Animations</span>
-              <span class="skill-pill">Accessibility-minded</span>
-            </div>
-          </div>
-
-          <div class="skills-card reveal">
-            <div class="skills-title-row">
-              <div class="skills-title">Logic & Tools</div>
-              <div class="skills-icon">⚙️</div>
-            </div>
-            <div class="skills-list">
-              <span class="skill-pill">Java</span>
-              <span class="skill-pill">Python</span>
-              <span class="skill-pill">Swift basics</span>
-              <span class="skill-pill">Chrome Extensions</span>
-              <span class="skill-pill">Web APIs</span>
-            </div>
-          </div>
-
-          <div class="skills-card reveal">
-            <div class="skills-title-row">
-              <div class="skills-title">Focus Areas</div>
-              <div class="skills-icon">🎯</div>
-            </div>
-            <div class="skills-list">
-              <span class="skill-pill">UI/UX thinking</span>
-              <span class="skill-pill">Micro-interactions</span>
-              <span class="skill-pill">Education products</span>
-              <span class="skill-pill">Financial tools</span>
-              <span class="skill-pill">AI-assisted flows</span>
-            </div>
-          </div>
-
-          <div class="skills-card reveal">
-            <div class="skills-title-row">
-              <div class="skills-title">Teaching</div>
-              <div class="skills-icon">📚</div>
-            </div>
-            <div class="skills-list">
-              <span class="skill-pill">Computer fundamentals</span>
-              <span class="skill-pill">CCC curriculum</span>
-              <span class="skill-pill">Exam-oriented practice</span>
-              <span class="skill-pill">Live doubt solving</span>
-            </div>
-          </div>
-
-          <div class="skills-card reveal">
-            <div class="skills-title-row">
-              <div class="skills-title">Content & Community</div>
-              <div class="skills-icon">✍️</div>
-            </div>
-            <div class="skills-list">
-              <span class="skill-pill">Dev.to articles</span>
-              <span class="skill-pill">Hashnode blogs</span>
-              <span class="skill-pill">Blogger posts</span>
-              <span class="skill-pill">YouTube tutorials</span>
-            </div>
-          </div>
-
-          <div class="skills-card reveal">
-            <div class="skills-title-row">
-              <div class="skills-title">Direction</div>
-              <div class="skills-icon">🚀</div>
-            </div>
-            <div class="skills-list">
-              <span class="skill-pill">AI + Education</span>
-              <span class="skill-pill">Gamified learning</span>
-              <span class="skill-pill">Interactive dashboards</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-kicker">Selected Work</span>
-          <div>
-            <h2 class="section-title">A snapshot of tools, interfaces, and experiments.</h2>
-            <p class="section-subtitle">
-              I enjoy taking small ideas and turning them into polished utilities –
-              calculators, learning tools, UI components, and productivity helpers.
-            </p>
-          </div>
+    <!-- ==================== TERMS OF SERVICE ==================== -->
+    <section class="terms" id="terms">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Legal</span>
+                <h2>Terms of Service</h2>
+                <p>Please read these terms carefully before using Finance Friend.</p>
+            </div>
+            <div class="policy-content reveal">
+                <span class="last-updated">Last Updated: May 1, 2026</span>
+                <h3>1. Acceptance of Terms</h3>
+                <p>By downloading, installing, or using Finance Friend ("the App"), you agree to be bound by these Terms
+                    of Service. If you do not agree to these terms, please do not use the App.</p>
+                <h3>2. Description of Service</h3>
+                <p>Finance Friend is a <strong>free, ad-supported</strong> personal finance management application that helps users track expenses, manage
+                    budgets, set savings goals, and gain insights into their financial habits. The App is supported by advertisements served through Google AdMob.</p>
+                <h3>3. User Responsibilities</h3>
+                <ul>
+                    <li>You are responsible for the accuracy of the financial data you enter into the App.</li>
+                    <li>You are responsible for maintaining the security of your device and the App's PIN lock.</li>
+                    <li>You should regularly back up your data using the App's export features.</li>
+                    <li>You must not use the App for any illegal or unauthorized purpose.</li>
+                </ul>
+                <h3>4. Disclaimer of Warranties</h3>
+                <p>Finance Friend is provided "as is" and "as available" without warranties of any kind, either express
+                    or implied. We do not guarantee that the App will be error-free, uninterrupted, or meet your
+                    specific requirements. The App is not a substitute for professional financial advice.</p>
+                <h3>5. Limitation of Liability</h3>
+                <p>To the fullest extent permitted by law, Vinkal (the developer) shall not be liable for any indirect,
+                    incidental, special, consequential, or punitive damages resulting from your use of the App. This
+                    includes, but is not limited to, loss of data, financial losses, or any damages arising from
+                    reliance on information provided by the App.</p>
+                <h3>6. Financial Disclaimer</h3>
+                <p>Finance Friend provides tools for personal financial tracking and analysis only. The App does not
+                    provide financial advice, investment recommendations, or tax guidance. Always consult a qualified
+                    financial advisor for professional financial decisions.</p>
+                <h3>7. Intellectual Property</h3>
+                <p>All content, design, code, graphics, and trademarks in Finance Friend are the intellectual property
+                    of Vinkal. You may not copy, modify, distribute, or reverse-engineer any part of the App without
+                    prior written consent.</p>
+                <h3>8. Advertisements</h3>
+                <p>Finance Friend displays advertisements through Google AdMob. By using the App, you acknowledge that ads will be displayed, an internet connection may be required for loading ads, and ad content is provided by third-party advertisers. We are not responsible for products or services offered through advertisements.</p>
+                <h3>9. Updates & Changes</h3>
+                <p>We reserve the right to update, modify, or discontinue any features of the App at any time. We may
+                    also update these Terms of Service, and continued use after changes constitutes acceptance.</p>
+                <h3>10. Governing Law</h3>
+                <p>These Terms of Service shall be governed by and construed in accordance with the laws of India. Any
+                    disputes arising from these terms shall be resolved in the courts of India.</p>
+                <h3>11. Contact</h3>
+                <p>For any questions about these Terms of Service, please contact:</p>
+                <ul>
+                    <li><strong>Developer:</strong> Vinkal</li>
+                    <li><strong>Email:</strong> <a href="mailto:vinkal93041@gmail.com">vinkal93041@gmail.com</a></li>
+                </ul>
+                <p style="margin-top:20px;"><a href="terms.html" style="font-weight:600;">📄 View Full Terms of Service →</a></p>
+            </div>
         </div>
-
-        <div class="projects-grid">
-          <article class="project-card reveal">
-            <div class="project-top-row">
-              <h3 class="project-name">Vin Quiz: AI Learning & Exams</h3>
-              <span class="project-tag">Learning Product</span>
-            </div>
-            <p class="project-description">
-              A quiz-driven learning app focused on Computer, CCC, math and competitive exams,
-              blending traditional questions with AI-assisted explanations.
-            </p>
-            <div class="project-meta-row">
-              <span>Quizzes</span>
-              <span>AI helper</span>
-              <span>Exam-oriented</span>
-            </div>
-            <div class="project-link-row">
-              <a href="https://vinkal93.github.io/Vin-Quiz-Privacy-policy/" class="project-link" aria-label="Vin Quiz case study (coming soon)">
-                <span>Case study (soon)</span> ↗
-              </a>
-              <span>Product + UX + Dev</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-top-row">
-              <h3 class="project-name">Advanced Color Picker</h3>
-              <span class="project-tag">Chrome Extension</span>
-            </div>
-            <p class="project-description">
-              A browser extension for designers & developers with precise color picking,
-              multiple formats (HEX, RGB, HSL) and quick copy workflows.
-            </p>
-            <div class="project-meta-row">
-              <span>UX for devs</span>
-              <span>Eyedropper</span>
-              <span>Productivity</span>
-            </div>
-            <div class="project-link-row">
-              <a
-                href="https://microsoftedge.microsoft.com/addons/detail/dinmdngdpmpegbnhmoohekpnlldhpdlp"
-                class="project-link"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>View extension</span> ↗
-              </a>
-              <span>Design • Build • Launch</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-top-row">
-              <h3 class="project-name">Interactive Particles Hero</h3>
-              <span class="project-tag">UI Experiment</span>
-            </div>
-            <p class="project-description">
-              A landing hero with responsive layout and interactive particles, built to
-              explore motion, depth, and modern hero design patterns.
-            </p>
-            <div class="project-meta-row">
-              <span>JavaScript</span>
-              <span>Micro-interactions</span>
-              <span>Landing page</span>
-            </div>
-            <div class="project-link-row">
-              <a href="https://dev.to/vinkalprajapati" class="project-link">
-                <span>View on Dev.to</span> ↗
-              </a>
-              <span>UI/UX playground</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-top-row">
-              <h3 class="project-name">Financial Calculators Suite</h3>
-              <span class="project-tag">Utility Tools</span>
-            </div>
-            <p class="project-description">
-              A collection of EMI, SIP, retirement and loan calculators designed with
-              neumorphism, clarity, and mobile-first layouts.
-            </p>
-            <div class="project-meta-row">
-              <span>HTML/CSS/JS</span>
-              <span>Neumorphism</span>
-              <span>Real-life use</span>
-            </div>
-            <div class="project-link-row">
-              <a href="#" class="project-link">
-                <span>View projects</span> ↗
-              </a>
-              <span>UI + Logic</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-top-row">
-              <h3 class="project-name">Productivity & Dev Tools</h3>
-              <span class="project-tag">Mini Apps</span>
-            </div>
-            <p class="project-description">
-              From password generators and to-do lists to digital clocks and countdown
-              timers – small tools with professional polish.
-            </p>
-            <div class="project-meta-row">
-              <span>Component thinking</span>
-              <span>Codepen/Dev.to</span>
-            </div>
-            <div class="project-link-row">
-              <a href="#" class="project-link">
-                <span>Browse gallery</span> ↗
-              </a>
-              <span>Fast experiments</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-top-row">
-              <h3 class="project-name">Team Showcase & 3D Carousels</h3>
-              <span class="project-tag">UI Patterns</span>
-            </div>
-            <p class="project-description">
-              Neumorphic team sections, 3D card carousels with swiper.js, and animated
-              navbars built as reusable patterns for future projects.
-            </p>
-            <div class="project-meta-row">
-              <span>Visual hierarchy</span>
-              <span>Motion</span>
-              <span>Reusable components</span>
-            </div>
-            <div class="project-link-row">
-              <a href="#" class="project-link">
-                <span>See UI library</span> ↗
-              </a>
-              <span>Design systems</span>
-            </div>
-          </article>
-        </div>
-      </div>
     </section>
 
-    <!-- TIMELINE + TEACHING -->
-    <section class="section" id="teaching">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-kicker">Journey</span>
-          <div>
-            <h2 class="section-title">From self-taught experiments to running an institute.</h2>
-            <p class="section-subtitle">
-              I’ve kept one rule from the beginning: keep learning, keep shipping, and
-              keep helping others grow with you.
-            </p>
-          </div>
+    <!-- ==================== DOWNLOAD CTA ==================== -->
+    <section class="download-cta" id="download">
+        <div class="container">
+            <div class="cta-card reveal">
+                <h2>Ready to Take Control of<br>Your <span class="gradient-text">Finances</span>?</h2>
+                <p>Download Finance Friend today and start your journey to financial freedom. It's free, private, and
+                    powerful.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.financefriend.app"
+                    class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Download on Google Play
+                </a>
+            </div>
         </div>
+    </section>
 
-        <div class="dual-grid">
-          <div class="timeline reveal">
-            <h3 style="font-size: 0.96rem; margin-bottom: 0.4rem;">
-              Milestones & themes
-            </h3>
-            <div class="timeline-list">
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Early</div>
-                <div class="timeline-title">First experiments with the web</div>
-                <div class="timeline-body">
-                  Building basic layouts, landing pages, and experimenting with calculators,
-                  clocks, and mini apps using pure HTML, CSS, and JS.
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Growth</div>
-                <div class="timeline-title">Publishing projects & articles online</div>
-                <div class="timeline-body">
-                  Sharing utilities, UI experiments, and tutorials on platforms like Dev.to,
-                  Hashnode, Blogger, and GitHub to document the journey and help beginners.
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Quantum Institute</div>
-                <div class="timeline-title">Turning teaching into a mission</div>
-                <div class="timeline-body">
-                  Launching Quantum Institute to train students in Computer, CCC and
-                  practical technology with a focus on clarity, real-world examples, and
-                  confidence-building.
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Now</div>
-                <div class="timeline-title">Building at the intersection of tech & education</div>
-                <div class="timeline-body">
-                  Creating AI-assisted learning tools, interactive dashboards, and apps like
-                  Vin Quiz to make learning more engaging and outcome-oriented.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="panel reveal">
-            <div class="panel-title-row">
-              <h3 class="panel-title">Teaching philosophy @ Quantum Institute</h3>
-              <span class="pill">
-                <span class="pill-dot"></span>
-                Learn by doing
-              </span>
-            </div>
-            <p>
-              My goal is simple: take students from “I’m scared of computers” to
-              “I can build and understand things on my own”.
-            </p>
-            <div class="panel-tags">
-              <span class="panel-tag">Structured foundations</span>
-              <span class="panel-tag">Clear Hindi + English explanations</span>
-              <span class="panel-tag">Practice-heavy</span>
-            </div>
-            <ul class="panel-list">
-              <li>Concepts are explained with real examples – not just theory or slides.</li>
-              <li>Students use digital tools, apps, and quizzes to reinforce learning.</li>
-              <li>Focus on Computer, CCC, and digital skills that actually help in jobs & exams.</li>
-              <li>Learning materials are updated as technology and exam patterns evolve.</li>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-text">© 2026 Finance Friend by Vinkal. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="mailto:vinkal93041@gmail.com">Contact</a></li>
             </ul>
-          </div>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-kicker">Contact</span>
-          <div>
-            <h2 class="section-title">Let’s talk about your idea, product, or institute.</h2>
-            <p class="section-subtitle">
-              Whether you’re looking for a website, a learning product, a utility app, or
-              want to collaborate on tech-education, I’d love to hear from you.
-            </p>
-          </div>
-        </div>
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        // --- Elements ---
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const menuBtn = document.getElementById('menuBtn');
+        const sidebarClose = document.getElementById('sidebarClose');
+        const navbar = document.getElementById('navbar');
+        const themeToggleNav = document.getElementById('themeToggleNav');
+        const themeToggleSidebar = document.getElementById('themeToggleSidebar');
+        const themeIconSidebar = document.getElementById('themeIconSidebar');
+        const html = document.documentElement;
 
-        <div class="contact-grid">
-          <div class="reveal">
-            <p style="font-size: 0.94rem; color: var(--muted); max-width: 540px;">
-              I’m open to collaborations, freelance projects, and partnerships around:
-            </p>
-            <ul class="panel-list" style="margin-top: 0.8rem;">
-              <li>Websites and web apps for businesses, institutes, or products.</li>
-              <li>Learning platforms, quiz tools, and exam-oriented digital products.</li>
-              <li>Chrome extensions or small utilities to streamline workflows.</li>
-              <li>Workshops or sessions for your students or team on digital skills.</li>
-            </ul>
-
-            <div class="contact-footer">
-              <span>
-                📧 Email:
-                <!-- apna real email yaha daalo -->
-                <a href="mailto:hello@vinkal041.com">hello@vinkal041.com</a>
-              </span>
-              <span>
-                🔗 GitHub:
-                <a href="https://github.com/Vinkal93" target="_blank" rel="noreferrer">
-                  @Vinkal93
-                </a>
-              </span>
-              <span>
-                📝 Dev.to:
-                <a href="https://dev.to/vinkalprajapati" target="_blank" rel="noreferrer">
-                  /vinkalprajapati
-                </a>
-              </span>
-              <span>
-                📰 Blog:
-                <a href="https://www.vinkal041.com" target="_blank" rel="noreferrer">
-                  vinkal041.com
-                </a>
-              </span>
-            </div>
-          </div>
-
-          <form class="contact-form reveal" onsubmit="handleSubmit(event)" novalidate>
-            <div class="form-row">
-              <div class="form-field">
-                <label for="name">Name</label>
-                <input id="name" type="text" name="name" placeholder="Your name" required />
-              </div>
-              <div class="form-field">
-                <label for="email">Email</label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="you@example.com"
-                  required
-                />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-field">
-                <label for="subject">Project / topic</label>
-                <input
-                  id="subject"
-                  type="text"
-                  name="subject"
-                  placeholder="Website for institute, app idea, etc."
-                />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-field">
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Tell me a bit about what you’re trying to build."
-                  required
-                ></textarea>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary" style="margin-top: 0.6rem;">
-              Send message
-              <span class="btn-icon">➤</span>
-            </button>
-            <p
-              id="formStatus"
-              style="margin-top: 0.6rem; font-size: 0.78rem; color: var(--muted);"
-            ></p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="yearSpan"></span> Vinkal Prajapati. All rights reserved.</span>
-      <div class="footer-links">
-        <a href="#hero">Back to top</a>
-        <a href="https://github.com/Vinkal93" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://dev.to/vinkalprajapati" target="_blank" rel="noreferrer">Dev.to</a>
-        <a href="https://vinkal041.hashnode.dev" target="_blank" rel="noreferrer">Hashnode</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Theme management with dropdown
-    const root = document.documentElement;
-    const themeToggle = document.getElementById("themeToggle");
-    const themeDropdown = document.getElementById("themeDropdown");
-    const themeOptions = document.querySelectorAll(".theme-option");
-
-    function setTheme(mode) {
-      // Add animation class
-      document.body.classList.add("theme-changing");
-      
-      setTimeout(() => {
-        if (mode === "system") {
-          const prefersLight = window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: light)").matches;
-          root.setAttribute("data-theme", prefersLight ? "light" : "dark");
-          localStorage.setItem("vp-theme", "system");
-        } else {
-          root.setAttribute("data-theme", mode);
-          localStorage.setItem("vp-theme", mode);
+        // --- Sidebar Open/Close ---
+        function openSidebar() {
+            sidebar.classList.add('open');
+            sidebarOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
-        updateActiveThemeOption();
-        
-        // Remove animation class after transition
-        setTimeout(() => {
-          document.body.classList.remove("theme-changing");
-        }, 400);
-      }, 50);
-    }
 
-    function updateActiveThemeOption() {
-      const currentTheme = localStorage.getItem("vp-theme") || "system";
-      // Update navbar dropdown options
-      themeOptions.forEach((option) => {
-        option.classList.toggle("active", option.dataset.theme === currentTheme);
-      });
-      // Update sidebar options
-      const sidebarThemeOptions = document.querySelectorAll(".sidebar-theme-option");
-      sidebarThemeOptions.forEach((option) => {
-        option.classList.toggle("active", option.dataset.theme === currentTheme);
-      });
-    }
-
-    (function initTheme() {
-      const savedTheme = localStorage.getItem("vp-theme");
-      if (savedTheme === "light" || savedTheme === "dark" || savedTheme === "system") {
-        setTheme(savedTheme);
-      } else {
-        setTheme("system");
-      }
-    })();
-
-    // Toggle dropdown
-    themeToggle.addEventListener("click", (e) => {
-      e.stopPropagation();
-      themeDropdown.classList.toggle("open");
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!themeToggle.contains(e.target) && !themeDropdown.contains(e.target)) {
-        themeDropdown.classList.remove("open");
-      }
-    });
-
-    // Theme option selection (navbar dropdown)
-    themeOptions.forEach((option) => {
-      option.addEventListener("click", () => {
-        const theme = option.dataset.theme;
-        setTheme(theme);
-        themeDropdown.classList.remove("open");
-      });
-    });
-
-    // Sidebar theme option selection
-    const sidebarThemeOptions = document.querySelectorAll(".sidebar-theme-option");
-    sidebarThemeOptions.forEach((option) => {
-      option.addEventListener("click", () => {
-        const theme = option.dataset.theme;
-        setTheme(theme);
-      });
-    });
-
-    // Listen for system theme changes
-    if (window.matchMedia) {
-      window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", () => {
-        if (localStorage.getItem("vp-theme") === "system") {
-          setTheme("system");
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            sidebarOverlay.classList.remove('active');
+            document.body.style.overflow = '';
         }
-      });
-    }
 
-    // Sidebar toggle
-    const menuToggle = document.getElementById("menuToggle");
-    const sidebar = document.getElementById("sidebar");
-    const sidebarOverlay = document.getElementById("sidebarOverlay");
-    const sidebarClose = document.getElementById("sidebarClose");
+        menuBtn.addEventListener('click', openSidebar);
+        sidebarClose.addEventListener('click', closeSidebar);
+        sidebarOverlay.addEventListener('click', closeSidebar);
 
-    function openSidebar() {
-      sidebar.classList.add("open");
-      sidebarOverlay.classList.add("active");
-      document.body.classList.add("sidebar-open");
-    }
-
-    function closeSidebar() {
-      sidebar.classList.remove("open");
-      sidebarOverlay.classList.remove("active");
-      document.body.classList.remove("sidebar-open");
-    }
-
-    menuToggle.addEventListener("click", openSidebar);
-    sidebarClose.addEventListener("click", closeSidebar);
-    sidebarOverlay.addEventListener("click", closeSidebar);
-
-    // Close sidebar when clicking on links
-    sidebar.querySelectorAll(".sidebar-link").forEach((link) => {
-      link.addEventListener("click", () => {
-        closeSidebar();
-      });
-    });
-
-    // Close sidebar on ESC key
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && sidebar.classList.contains("open")) {
-        closeSidebar();
-      }
-    });
-
-    // Active nav links on scroll (throttled with requestAnimationFrame)
-    const sections = document.querySelectorAll("main section[id]");
-    const navLinks = document.querySelectorAll(".nav-links .nav-link");
-    const sidebarLinks = document.querySelectorAll(".sidebar-link");
-    let ticking = false;
-
-    function handleScroll() {
-      const scrollPos = window.scrollY + 110;
-      sections.forEach((section) => {
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
-        const id = section.getAttribute("id");
-        if (scrollPos >= top && scrollPos < top + height) {
-          navLinks.forEach((link) => {
-            link.classList.toggle(
-              "nav-link--active",
-              link.getAttribute("href") === "#" + id
-            );
-          });
-          sidebarLinks.forEach((link) => {
-            link.classList.toggle(
-              "active",
-              link.getAttribute("href") === "#" + id
-            );
-          });
-        }
-      });
-    }
-
-    window.addEventListener("scroll", () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          handleScroll();
-          ticking = false;
+        // Close sidebar on link click
+        document.querySelectorAll('.sidebar-link').forEach(link => {
+            link.addEventListener('click', closeSidebar);
         });
-        ticking = true;
-      }
-    });
 
-    // Scroll reveal
-    const revealEls = document.querySelectorAll(".reveal");
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
-      );
-      revealEls.forEach((el) => observer.observe(el));
-    } else {
-      // Fallback: show all
-      revealEls.forEach((el) => el.classList.add("is-visible"));
-    }
+        // --- Theme Toggle ---
+        function getTheme() {
+            return localStorage.getItem('ff-theme') || 'light';
+        }
 
-    // Simple fake form handling (hook to backend/Formspree later)
-    function handleSubmit(e) {
-      e.preventDefault();
-      const form = e.target;
-      const statusEl = document.getElementById("formStatus");
+        function setTheme(theme) {
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('ff-theme', theme);
+            updateThemeIcons(theme);
+        }
 
-      // Basic front-end validation
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const message = form.message.value.trim();
+        function updateThemeIcons(theme) {
+            const isDark = theme === 'dark';
+            themeToggleNav.textContent = isDark ? '☀️' : '🌙';
+            themeIconSidebar.textContent = isDark ? '☀️' : '🌙';
+            themeToggleSidebar.checked = isDark;
+        }
 
-      if (!name || !email || !message) {
-        statusEl.textContent = "Please fill in all required fields.";
-        return;
-      }
+        // Initialize theme
+        const savedTheme = getTheme();
+        setTheme(savedTheme);
 
-      statusEl.textContent =
-        "Thanks for reaching out. I’ll get back to you as soon as possible.";
-      form.reset();
-    }
+        // Nav theme button
+        themeToggleNav.addEventListener('click', () => {
+            const newTheme = getTheme() === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
 
-    // Footer year
-    const currentYear = new Date().getFullYear();
-    document.getElementById("yearSpan").textContent = currentYear;
-    document.getElementById("sidebarYear").textContent = currentYear;
-  </script>
+        // Sidebar toggle switch
+        themeToggleSidebar.addEventListener('change', () => {
+            const newTheme = themeToggleSidebar.checked ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+
+        // --- Navbar Scroll Effect ---
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // --- Scroll Reveal Animation ---
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.closest('.features-grid')
+                        ? Array.from(entry.target.parentElement.children).indexOf(entry.target) * 60
+                        : 0;
+                    setTimeout(() => entry.target.classList.add('visible'), delay);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // --- Smooth Scroll ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // --- Active nav highlight ---
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.pageYOffset + 120;
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                const id = section.getAttribute('id');
+                const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+                if (link) {
+                    if (scrollY >= top && scrollY < top + height) {
+                        link.style.color = 'var(--primary)';
+                        link.style.background = 'rgba(26, 122, 78, 0.06)';
+                    } else {
+                        link.style.color = '';
+                        link.style.background = '';
+                    }
+                }
+            });
+        });
+
+        // --- Close sidebar on ESC key ---
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeSidebar();
+        });
+
+        // --- PWA Service Worker Registration ---
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('SW registered:', reg.scope))
+                    .catch(err => console.log('SW registration failed:', err));
+            });
+        }
+
+        // --- PWA Install Prompt ---
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            // Show install banner after 3 seconds
+            setTimeout(() => {
+                if (deferredPrompt) {
+                    const banner = document.createElement('div');
+                    banner.id = 'pwa-banner';
+                    banner.style.cssText = 'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;padding:16px 24px;display:flex;align-items:center;gap:16px;box-shadow:0 8px 32px rgba(0,0,0,0.15);z-index:9999;max-width:420px;width:90%;';
+                    banner.innerHTML = '<div style="flex:1"><strong style="font-size:0.95rem">Install Finance Friend</strong><p style="font-size:0.8rem;color:var(--text-secondary);margin-top:4px">Add to home screen for quick access</p></div><button id="pwa-install" style="padding:10px 20px;background:var(--gradient-primary);color:#fff;border:none;border-radius:50px;font-weight:600;font-size:0.85rem;cursor:pointer;font-family:inherit">Install</button><button id="pwa-close" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:1.2rem;padding:4px">✕</button>';
+                    document.body.appendChild(banner);
+                    document.getElementById('pwa-install').addEventListener('click', async () => {
+                        deferredPrompt.prompt();
+                        const { outcome } = await deferredPrompt.userChoice;
+                        deferredPrompt = null;
+                        banner.remove();
+                    });
+                    document.getElementById('pwa-close').addEventListener('click', () => banner.remove());
+                }
+            }, 3000);
+        });
+    </script>
 </body>
+
 </html>
