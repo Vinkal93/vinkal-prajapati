@@ -5,7 +5,7 @@ const urlsToCache = [
   './privacy.html',
   './terms.html',
   './manifest.json',
-  './Assets/Finance friend.png'
+  './Assets/finance-friend-icon.png'
 ];
 
 self.addEventListener('install', event => {
